@@ -3,6 +3,7 @@
     :title="$route.meta.title"
     :left-arrow="showLeftArrow"
     fixed
+    safe-area-inset-top
     @click-left="onClickLeft"
   />
 </template>
