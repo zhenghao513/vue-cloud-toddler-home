@@ -1,5 +1,7 @@
 <template>
-  <PageLayout></PageLayout>
+  <PageLayout>
+    <AppSearch />
+  </PageLayout>
 </template>
 
 <script setup lang="ts"></script>
