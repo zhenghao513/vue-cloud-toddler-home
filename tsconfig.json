@@ -9,6 +9,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    "types": ["vant/es"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
