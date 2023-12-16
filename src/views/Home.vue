@@ -1,8 +1,5 @@
 <template>
-  <AppNavbar />
-  
-  <RouterView />
-  <AppTabbar />
+  <PageLayout></PageLayout>
 </template>
 
 <script setup lang="ts"></script>

@@ -33,6 +33,7 @@ export default defineConfig({
     }),
     Components({
       resolvers: [VantResolver()],
+      dirs: ['src/components', 'src/layouts'],
       dts: true,
       types: [
         {
