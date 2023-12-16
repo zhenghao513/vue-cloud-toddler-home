@@ -4,6 +4,7 @@
     :left-arrow="showLeftArrow"
     fixed
     safe-area-inset-top
+    :z-index="Number.MAX_SAFE_INTEGER"
     @click-left="onClickLeft"
   />
 </template>
