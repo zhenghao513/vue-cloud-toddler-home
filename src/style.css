@@ -17,3 +17,8 @@ body {
 body * + * {
   margin-top: 1.5em;
 }
+
+/* 移除猫头鹰选择器设置的顶部外边距 */
+body * + *[class^='van-'] {
+  margin-top: 0;
+}
