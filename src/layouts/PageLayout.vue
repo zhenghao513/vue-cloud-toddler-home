@@ -11,5 +11,6 @@
   padding-top: 46px;
   padding-bottom: 50px;
   margin-top: 0;
+  min-height: 100vh;
 }
 </style>
