@@ -1,18 +1,21 @@
 <template>
-  <van-tabbar
-    v-model="active"
-    route
-  >
-    <van-tabbar-item
-      v-for="item in tabbarItems"
-      :key="item.name"
-      :name="item.name"
-      :icon="item.icon"
-      :to="item.to"
+  <transition name="van-slide-up">
+    <van-tabbar
+      v-show="visible"
+      v-model="active"
+      route
     >
-      {{ item.text }}
-    </van-tabbar-item>
-  </van-tabbar>
+      <van-tabbar-item
+        v-for="item in tabbarItems"
+        :key="item.name"
+        :name="item.name"
+        :icon="item.icon"
+        :to="item.to"
+      >
+        {{ item.text }}
+      </van-tabbar-item>
+    </van-tabbar>
+  </transition>
 </template>
 
 <script setup lang="ts">
@@ -45,6 +48,10 @@ const tabbarItems: TabbarItem[] = [
 const route = useRoute()
 watchEffect(() => {
   active.value = String(route.name)
+})
+
+const visible = computed(() => {
+  return ['home', 'user'].includes(String(route.name))
 })
 </script>
 
