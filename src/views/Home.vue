@@ -25,25 +25,25 @@ const gridItems: GridItemProps[] = [
     dot: false,
     replace: false,
     text: '报名申请',
-    icon: 'icon-a-027_ditu',
+    icon: 'icon-a-027_shangwang',
   },
   {
     dot: false,
     replace: false,
     text: '成长评估',
-    icon: 'icon-a-027_ditu',
+    icon: 'icon-a-027_shuju-15',
   },
   {
     dot: false,
     replace: false,
     text: '今日菜谱',
-    icon: 'icon-a-027_ditu',
+    icon: 'icon-a-027_gouwu-04',
   },
   {
     dot: false,
     replace: false,
     text: '精彩瞬间',
-    icon: 'icon-a-027_ditu',
+    icon: 'icon-a-027_tupian-13',
   },
   {
     dot: false,
@@ -55,19 +55,19 @@ const gridItems: GridItemProps[] = [
     dot: false,
     replace: false,
     text: '特色课程',
-    icon: 'icon-a-027_ditu',
+    icon: 'icon-a-027_youxi-25',
   },
   {
     dot: false,
     replace: false,
     text: '建议中心',
-    icon: 'icon-a-027_ditu',
+    icon: 'icon-a-027_xinfeng',
   },
   {
     dot: false,
     replace: false,
     text: '每日签到',
-    icon: 'icon-a-027_ditu',
+    icon: 'icon-a-027_rili',
   },
 ]
 </script>
