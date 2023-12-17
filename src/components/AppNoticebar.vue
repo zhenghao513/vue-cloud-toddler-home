@@ -8,7 +8,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   leftIcon?: string
-  text: string
+  text?: string
 }>()
 </script>
 

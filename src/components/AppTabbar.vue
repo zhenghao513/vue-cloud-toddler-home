@@ -1,5 +1,8 @@
 <template>
-  <van-tabbar v-model="active">
+  <van-tabbar
+    v-model="active"
+    route
+  >
     <van-tabbar-item
       v-for="item in tabbarItems"
       :key="item.name"
@@ -27,7 +30,7 @@ const tabbarItems: TabbarItem[] = [
     text: '首页',
     name: 'home',
     icon: 'home-o',
-    to: 'home',
+    to: '/home',
   },
   {
     dot: false,
@@ -35,7 +38,7 @@ const tabbarItems: TabbarItem[] = [
     text: '我',
     name: 'user',
     icon: 'user-o',
-    to: 'user',
+    to: '/user',
   },
 ]
 

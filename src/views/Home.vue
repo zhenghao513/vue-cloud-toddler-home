@@ -2,7 +2,7 @@
   <PageLayout>
     <AppNoticebar
       left-icon="volume-o"
-      :text="data.message ?? error"
+      :text="data?.message"
     />
     <AppSearch />
     <AppGrid :grid-list="gridItems" />
@@ -16,7 +16,7 @@ import { GridItemProps } from 'vant'
 interface WelcomeMessage {
   message: string
 }
-const { data, error } = useFetch<WelcomeMessage>(
+const { data } = useFetch<WelcomeMessage>(
   'https://mock.presstime.cn/mock/657d66b7b9a378051c093a41/home-notice',
 )
 
