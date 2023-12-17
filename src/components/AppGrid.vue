@@ -4,6 +4,7 @@
       v-for="item in props.gridList"
       :key="item.text"
       :text="item.text"
+      :to="item.to"
     >
       <template #icon>
         <IconSymbol :icon="item.icon" />
