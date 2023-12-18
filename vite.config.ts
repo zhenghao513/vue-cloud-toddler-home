@@ -13,6 +13,7 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
+        'pinia',
         {
           '@vueuse/core': ['useMouse', ['useFetch', 'useMyFetch']],
           axios: [['default', 'axios']],
