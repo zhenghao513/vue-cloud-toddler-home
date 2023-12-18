@@ -3,6 +3,10 @@
   font-size: calc(100vw / 10);
 }
 
+:root:root {
+  --van-back-top-background: rgba(25, 137, 250, 0.5);
+}
+
 *,
 ::before,
 ::after {
