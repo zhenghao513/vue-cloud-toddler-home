@@ -4,7 +4,9 @@
       <VanNoticeBar
         :text="currentDate"
         left-icon="calendar-o"
-      />
+      >
+        <template #right-icon>{{ lng }}, {{ lat }}</template>
+      </VanNoticeBar>
     </div>
 
     <AppMapContainer :center="[lng, lat]" />
