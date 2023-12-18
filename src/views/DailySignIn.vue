@@ -11,17 +11,22 @@
 
     <div class="button-wrapper">
       <VanButton
-        :disabled="isSignInSuccessful"
+        :disabled="signIn"
         @click="handleSignIn"
       >
-        <span class="button-text">签到</span>
+        <span
+          v-if="!signIn"
+          class="button-text"
+        >
+          签到
+        </span>
         <span class="current-time">{{ currentTime }}</span>
       </VanButton>
     </div>
 
     <Transition name="van-fade">
       <span
-        v-show="!isSignInSuccessful"
+        v-show="!signIn"
         class="button-text--bottom"
       >
         今日你还未签到
@@ -42,6 +47,7 @@
 
 <script setup lang="ts">
 import useGeolocationService from '@/composables/useGeolocationService'
+import { useSignInStore } from '@/stores/sign-in'
 import { showLoadingToast, showSuccessToast } from 'vant'
 import 'vant/es/toast/style'
 
@@ -74,7 +80,7 @@ onBeforeUnmount(() => {
   clearInterval(intervalID)
 })
 
-const isSignInSuccessful = ref(false)
+const { signIn } = storeToRefs(useSignInStore())
 function handleSignIn() {
   showLoadingToast({
     message: '加载中...',
@@ -82,8 +88,7 @@ function handleSignIn() {
     onClose() {
       showSuccessToast('签到成功')
 
-      // TODO 使用 Pinia 在全局范围内管理状态
-      isSignInSuccessful.value = true
+      signIn.value = true
     },
   })
 }
