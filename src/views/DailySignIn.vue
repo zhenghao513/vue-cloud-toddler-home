@@ -15,7 +15,7 @@
         @click="handleSignIn"
       >
         <span
-          v-if="!signIn"
+          v-show="!signIn"
           class="button-text"
         >
           签到
