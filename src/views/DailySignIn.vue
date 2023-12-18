@@ -22,14 +22,14 @@
         >
           签到
         </span>
-        <span class="current-time">{{ currentTime }}</span>
+        <span class="button-time">{{ currentTime }}</span>
       </VanButton>
     </div>
 
     <Transition name="van-fade">
       <span
         v-show="!signIn"
-        class="button-text--bottom"
+        class="tips"
       >
         今日你还未签到
       </span>
@@ -132,7 +132,7 @@ function handleSignIn() {
   font-size: 24px;
 }
 
-.current-time {
+.button-time {
   margin-top: 0;
   font-size: 30px;
 }
@@ -145,7 +145,7 @@ function handleSignIn() {
   margin-top: auto;
 }
 
-.button-text--bottom {
+.tips {
   font-size: 10px;
   color: #666666;
 }
