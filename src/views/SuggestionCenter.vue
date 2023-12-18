@@ -2,9 +2,105 @@
   <TitlebarLayout
     title="建议中心"
     background-color="#F9A01E"
-  ></TitlebarLayout>
+  >
+    <VanForm
+      required="auto"
+      @submit="onSubmit"
+    >
+      <h2 class="block__title">人员信息</h2>
+
+      <VanCellGroup inset>
+        <VanField
+          v-model="name"
+          name="name"
+          label="姓名"
+          placeholder="请输入"
+          :rules="[{ required: true, message: '请输入姓名' }]"
+        />
+
+        <VanField
+          v-model="phoneNumber"
+          name="phoneNumber"
+          label="手机号"
+          placeholder="请输入"
+          :rules="[{ required: true, message: '请输入手机号' }]"
+        />
+
+        <van-field
+          name="isPublicInternet"
+          label="是否外网公开"
+        >
+          <template #input>
+            <van-switch v-model="isPublicInternet" />
+          </template>
+        </van-field>
+      </VanCellGroup>
+
+      <h2 class="block__title">事项信息</h2>
+
+      <VanCellGroup inset>
+        <VanField
+          v-model="title"
+          name="title"
+          label="标题"
+          placeholder="请输入"
+          :rules="[{ required: true, message: '请输入标题' }]"
+        />
+
+        <van-field
+          v-model="content"
+          name="content"
+          rows="1"
+          autosize
+          label="内容"
+          type="textarea"
+          placeholder="请输入"
+          :rules="[{ required: true, message: '请输入内容' }]"
+        />
+      </VanCellGroup>
+      <div style="margin: 16px">
+        <VanButton
+          round
+          block
+          type="primary"
+          native-type="submit"
+        >
+          提交
+        </VanButton>
+      </div>
+    </VanForm>
+  </TitlebarLayout>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const name = ref('')
+const phoneNumber = ref('')
+const isPublicInternet = ref(false)
 
-<style scoped></style>
+const title = ref('')
+const content = ref('')
+
+interface UserProfile {
+  name: string
+  phoneNumber: string
+  isPublicInternet: boolean
+  title: string
+  content: string
+}
+
+const onSubmit = (values: UserProfile) => {
+  // TODO: values 交由全局状态管理
+  console.log('submit', values)
+}
+</script>
+
+<style scoped>
+.block__title {
+  margin: 0;
+  padding: 32px 16px 16px;
+  color: #969799;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+</style>
