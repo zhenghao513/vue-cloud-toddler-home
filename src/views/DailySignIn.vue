@@ -23,6 +23,7 @@
           签到
         </span>
         <span class="button-time">{{ currentTime }}</span>
+        <span v-show="signIn">已签到</span>
       </VanButton>
     </div>
 
