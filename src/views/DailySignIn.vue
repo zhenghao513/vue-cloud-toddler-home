@@ -121,11 +121,19 @@ function handleSignIn() {
   width: 150px;
 }
 
+.van-button :deep(.van-button__text) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .button-text {
   font-size: 24px;
 }
 
 .current-time {
+  margin-top: 0;
   font-size: 30px;
 }
 
