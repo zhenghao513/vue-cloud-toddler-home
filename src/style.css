@@ -37,3 +37,11 @@ body > * + *,
   font-size: 14px;
   line-height: 16px;
 }
+
+.block__content {
+  padding: 0 16px;
+  color: #969799;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
