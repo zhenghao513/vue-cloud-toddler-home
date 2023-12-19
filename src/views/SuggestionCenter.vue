@@ -73,6 +73,11 @@
 </template>
 
 <script setup lang="ts">
+import { useSuggestionStore } from '@/stores/suggestion'
+import { UserSuggestionModel } from '@/types/global'
+import { showDialog } from 'vant'
+import 'vant/es/dialog/style'
+
 const name = ref('')
 const phoneNumber = ref('')
 const isPublicInternet = ref(false)
@@ -80,17 +85,13 @@ const isPublicInternet = ref(false)
 const title = ref('')
 const content = ref('')
 
-interface UserProfile {
-  name: string
-  phoneNumber: string
-  isPublicInternet: boolean
-  title: string
-  content: string
-}
-
-const onSubmit = (values: UserProfile) => {
-  // TODO: values 交由全局状态管理
-  console.log('submit', values)
+const suggestionStore = useSuggestionStore()
+const onSubmit = (values: UserSuggestionModel) => {
+  suggestionStore.addSuggestion(values)
+  showDialog({
+    title: '提交成功',
+    message: '我们会在24小时内处理您的请求，请耐心等待。',
+  }).then(() => history.back())
 }
 </script>
 
