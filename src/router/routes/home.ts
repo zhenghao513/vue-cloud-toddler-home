@@ -19,6 +19,12 @@ const homeRoutes: RouteRecordRaw[] = [
     meta: { title: '特色课程' },
     component: () => import('@/views/CharacteristicCourse.vue'),
   },
+  {
+    path: '/visited-garden',
+    name: 'VisitedGarden',
+    meta: { title: '园所参观' },
+    component: () => import('@/views/VisitedGarden.vue'),
+  },
 ]
 
 export default homeRoutes
