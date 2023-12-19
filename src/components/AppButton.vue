@@ -2,6 +2,7 @@
   <div
     class="block"
     :style="{ backgroundColor: props.backgroundColor }"
+    @click="$emit('click')"
   >
     <slot />
   </div>
@@ -11,6 +12,9 @@
 const props = defineProps<{
   backgroundColor?: string
 }>()
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const emits = defineEmits(['click'])
 </script>
 
 <style scoped>
