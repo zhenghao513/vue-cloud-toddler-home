@@ -95,13 +95,4 @@ const onSubmit = (values: UserSuggestionModel) => {
 }
 </script>
 
-<style scoped>
-.block__title {
-  margin: 0;
-  padding: 32px 16px 16px;
-  color: #969799;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-}
-</style>
+<style scoped></style>
