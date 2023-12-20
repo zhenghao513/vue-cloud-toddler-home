@@ -9,6 +9,26 @@
   --max-padding-end: var(--max-padding-start);
   --default-padding-top: 24px;
   --default-padding-bottom-fixed: 24px;
+
+  /* 普通双行及以上文本中，主次文本间隔 */
+  --text-margin-vertical: 2px;
+  --text-margin-horizontal: 8px;
+
+  /* 段落间间隔 */
+  --text-paragraph-margin-xl: 48px;
+  --text-paragraph-margin-l: 24px;
+  --text-paragraph-margin-m: 16px;
+  --text-paragraph-margin-s: 8px;
+  --text-paragraph-margin-xs: 4px;
+
+  /* 卡片间间隔 */
+  --space-elements-card: 12px;
+
+  /* 一般控件间间隔 */
+  --elements-margin-vertical-l: 16px;
+  --elements-margin-vertical-m: 8px;
+  --elements-margin-horizontal-l: var(--elements-margin-vertical-l);
+  --elements-margin-horizontal-m: var(--elements-margin-vertical-m);
 }
 
 :root:root {
