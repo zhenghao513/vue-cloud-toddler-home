@@ -24,8 +24,8 @@ const emits = defineEmits(['click'])
   color: #fff;
   font-size: 16px;
   line-height: 75px;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: var(--default-padding-start);
+  margin-right: var(--default-padding-end);
   text-align: center;
 }
 

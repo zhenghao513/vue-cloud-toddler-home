@@ -40,7 +40,7 @@ const paragraph = [
   justify-content: space-between;
   margin-top: 0;
   min-height: calc(100vh - 196px);
-  padding-bottom: 24px;
+  padding-bottom: var(--default-padding-bottom-fixed);
 }
 
 span:nth-child(2) {

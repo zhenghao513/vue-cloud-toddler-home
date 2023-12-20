@@ -1,6 +1,14 @@
 :root {
   box-sizing: border-box;
   font-size: calc(100vw / 10);
+
+  /* 屏幕边缘间隔 */
+  --default-padding-start: 12px;
+  --max-padding-start: 24px;
+  --default-padding-end: var(--default-padding-start);
+  --max-padding-end: var(--max-padding-start);
+  --default-padding-top: 24px;
+  --default-padding-bottom-fixed: 24px;
 }
 
 :root:root {
