@@ -7,7 +7,7 @@
       v-for="course in data?.courses"
       :key="course.id"
       :num="course.duration"
-      :price="priceFormatting(course.price)"
+      :price="formatPrice(course.price)"
       :desc="course.description"
       :title="course.name"
       thumb="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
@@ -35,8 +35,8 @@ const { data } = useFetch<Courses>(
   'https://mock.presstime.cn/mock/657d66b7b9a378051c093a41/home-characteristic-course',
 )
 
-function priceFormatting(price: string) {
-  return price.substring(0, price.length - 1)
+const formatPrice = (price: string) => {
+  return price.slice(0, -1)
 }
 </script>
 
