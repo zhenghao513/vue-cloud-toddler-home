@@ -102,6 +102,7 @@ function handleSignIn() {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 0;
 }
 
 .map-container {
