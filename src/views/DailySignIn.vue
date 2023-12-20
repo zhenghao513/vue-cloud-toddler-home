@@ -104,7 +104,7 @@ function handleSignIn() {
   align-items: center;
 }
 
-#map-container {
+.map-container {
   min-width: 100%;
   min-height: 300px;
   margin-top: 0;

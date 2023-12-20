@@ -53,7 +53,7 @@ body * + * {
 /* 移除猫头鹰选择器设置的顶部外边距 */
 body * + *[class^='van-'],
 body > * + *,
-#map-container > * + * {
+.map-container > * + * {
   margin-top: 0;
 }
 

@@ -1,5 +1,8 @@
 <template>
-  <div id="map-container"></div>
+  <div
+    id="container"
+    class="map-container"
+  ></div>
 </template>
 
 <script setup lang="ts">
@@ -26,13 +29,13 @@ onMounted(() => {
     plugins: [],
   })
     .then((AMap) => {
-      map = new AMap.Map('map-container', {
+      map = new AMap.Map('container', {
         viewMode: '3D',
         zoom: 11,
         center: props.center,
       })
 
-      map = new AMap.Map('map-container')
+      map = new AMap.Map('container')
       map?.plugin('AMap.Geolocation', () => {
         const geolocation = new AMap.Geolocation({
           enableHighAccuracy: true,
