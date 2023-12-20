@@ -18,12 +18,12 @@ const isSecondaryPage = computed(() => {
 <style scoped>
 .page-layout {
   padding-top: 46px;
-  padding-bottom: 50px;
+  padding-bottom: calc(50px + var(--default-padding-bottom-fixed));
   margin-top: 0;
   min-height: 100vh;
 }
 
 .page-layout--secondary {
-  padding-bottom: 0;
+  padding-bottom: var(--default-padding-bottom-fixed);
 }
 </style>
