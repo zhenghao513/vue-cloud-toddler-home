@@ -47,11 +47,11 @@ const tabbarItems: TabbarItem[] = [
 
 const route = useRoute()
 watchEffect(() => {
-  active.value = String(route.name)
+  active.value = route.name as string
 })
 
 const visible = computed(() => {
-  return ['home', 'user'].includes(String(route.name))
+  return ['home', 'user'].includes(route.name as string)
 })
 </script>
 
