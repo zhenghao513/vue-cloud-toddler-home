@@ -61,6 +61,12 @@ const homeRoutes: RouteRecordRaw[] = [
     meta: { title: '原幼儿报名' },
     component: () => import('@/views/ApplyDetail.vue'),
   },
+  {
+    path: '/assess',
+    name: 'Assess',
+    meta: { title: '成长评估' },
+    component: () => import('@/views/Assess.vue'),
+  },
 ]
 
 export default homeRoutes

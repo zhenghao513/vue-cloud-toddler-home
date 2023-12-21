@@ -33,6 +33,7 @@ const gridItems: GridItemProps[] = [
     replace: false,
     text: '成长评估',
     icon: 'icon-a-027_shuju-15',
+    to: { name: 'Assess' },
   },
   {
     dot: false,
