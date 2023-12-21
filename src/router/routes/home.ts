@@ -49,6 +49,18 @@ const homeRoutes: RouteRecordRaw[] = [
     meta: { title: '报名申请' },
     component: () => import('@/views/Apply.vue'),
   },
+  {
+    path: '/apply-begin',
+    name: 'ApplyBegin',
+    meta: { title: '新幼儿报名' },
+    component: () => import('@/views/ApplyDetail.vue'),
+  },
+  {
+    path: '/apply-origin',
+    name: 'ApplyOrigin',
+    meta: { title: '原幼儿报名' },
+    component: () => import('@/views/ApplyDetail.vue'),
+  },
 ]
 
 export default homeRoutes
