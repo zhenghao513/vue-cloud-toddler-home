@@ -26,6 +26,7 @@ const gridItems: GridItemProps[] = [
     replace: false,
     text: '报名申请',
     icon: 'icon-a-027_shangwang',
+    to: { name: 'Apply' },
   },
   {
     dot: false,

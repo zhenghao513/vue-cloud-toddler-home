@@ -43,6 +43,12 @@ const homeRoutes: RouteRecordRaw[] = [
     meta: { title: '室外环境' },
     component: () => import('@/views/VisitedGardenEnvironmentOutdoor.vue'),
   },
+  {
+    path: '/apply',
+    name: 'Apply',
+    meta: { title: '报名申请' },
+    component: () => import('@/views/Apply.vue'),
+  },
 ]
 
 export default homeRoutes
