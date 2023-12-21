@@ -17,6 +17,7 @@
     <AppButton
       v-if="$route.name === 'ApplyBegin'"
       backgroundColor="#E87361"
+      @click="$router.push({ name: 'CharacteristicCourse' })"
     >
       预约体验课
     </AppButton>
