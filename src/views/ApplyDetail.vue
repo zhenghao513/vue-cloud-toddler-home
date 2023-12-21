@@ -21,7 +21,12 @@
     >
       预约体验课
     </AppButton>
-    <AppButton backgroundColor="#E87361">预约评测</AppButton>
+    <AppButton
+      backgroundColor="#E87361"
+      @click="$router.push({ name: 'Assess' })"
+    >
+      预约评测
+    </AppButton>
   </TitlebarLayout>
 </template>
 
