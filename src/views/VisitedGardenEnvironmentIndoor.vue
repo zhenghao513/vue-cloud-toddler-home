@@ -11,9 +11,12 @@
       <van-empty />
 
       <div class="button-container">
-        <!-- TODO 路由跳转相应页面 -->
-        <AppButton>预约参观</AppButton>
-        <AppButton>了解更多</AppButton>
+        <AppButton @click="$router.push({ name: 'VisitedGardenAppointment' })">
+          预约参观
+        </AppButton>
+        <AppButton @click="$router.push({ name: 'Contact' })">
+          了解更多
+        </AppButton>
       </div>
     </div>
   </TitlebarLayout>
