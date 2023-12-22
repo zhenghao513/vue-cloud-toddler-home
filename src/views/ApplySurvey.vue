@@ -49,6 +49,8 @@
           position="bottom"
         >
           <VanDatePicker
+            :min-date="minDate"
+            :max-date="maxDate"
             @confirm="onConfirm"
             @cancel="showBirthdayPicker = false"
           />
@@ -201,6 +203,14 @@ const onSubmit = (values: ChildInfoModel) => {
     message: '我们会在24小时内处理您的请求，请耐心等待。',
   }).then(() => history.back())
 }
+
+const currentDate = new Date()
+const minDate = computed(() => {
+  return new Date(currentDate.getFullYear() - 5, 0, 1)
+})
+const maxDate = computed(() => {
+  return new Date(currentDate.getFullYear() - 2, 11, 31)
+})
 </script>
 
 <style scoped></style>
