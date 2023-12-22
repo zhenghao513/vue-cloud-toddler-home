@@ -4,7 +4,7 @@
     :style="{ backgroundColor: props.backgroundColor }"
     @click="$emit('click')"
   >
-    <slot />
+    <slot></slot>
   </div>
 </template>
 

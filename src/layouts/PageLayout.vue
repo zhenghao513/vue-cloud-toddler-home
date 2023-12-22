@@ -3,7 +3,7 @@
     class="page-layout"
     :class="{ 'page-layout--secondary': isSecondaryPage }"
   >
-    <slot />
+    <slot></slot>
   </div>
 </template>
 

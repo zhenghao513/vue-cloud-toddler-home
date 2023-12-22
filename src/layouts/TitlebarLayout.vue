@@ -1,7 +1,7 @@
 <template>
   <PageLayout>
     <AppTitlebar v-bind="$attrs" />
-    <slot />
+    <slot></slot>
   </PageLayout>
 </template>
 
