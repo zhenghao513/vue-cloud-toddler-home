@@ -166,7 +166,10 @@
 </template>
 
 <script setup lang="ts">
+import { useSurveyStore } from '@/stores/survey'
 import { ChildInfoModel } from '@/types/global'
+import { showDialog } from 'vant'
+import 'vant/es/dialog/style'
 
 const childName = ref('')
 const gender = ref('')
@@ -188,7 +191,14 @@ const educationalExpectation = ref('')
 const hobby = ref('')
 const specialNeedsAndSuggestions = ref('')
 
-const onSubmit = (values: ChildInfoModel) => {}
+const surveyStore = useSurveyStore()
+const onSubmit = (values: ChildInfoModel) => {
+  surveyStore.addSurvey(values)
+  showDialog({
+    title: '提交成功',
+    message: '我们会在24小时内处理您的请求，请耐心等待。',
+  }).then(() => history.back())
+}
 </script>
 
 <style scoped></style>
