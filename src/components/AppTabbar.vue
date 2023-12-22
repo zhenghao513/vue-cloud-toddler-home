@@ -33,7 +33,7 @@ const tabbarItems: TabbarItem[] = [
     text: '首页',
     name: 'home',
     icon: 'home-o',
-    to: '/home',
+    to: { name: 'home' },
   },
   {
     dot: false,
