@@ -176,6 +176,8 @@ const gender = ref('')
 
 const birthday = ref('')
 const showBirthdayPicker = ref(false)
+
+// @ts-ignore: It's ok to ignore this compile error
 const onConfirm = ({ selectedValues }) => {
   birthday.value = selectedValues.join('/')
   showBirthdayPicker.value = false
