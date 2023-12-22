@@ -13,7 +13,12 @@
 
     <h2 class="block__title">幼儿作息时间</h2>
 
-    <AppButton backgroundColor="#E87361">问卷调查</AppButton>
+    <AppButton
+      backgroundColor="#E87361"
+      @click="$router.push({ name: 'ApplySurvey' })"
+    >
+      问卷调查
+    </AppButton>
     <AppButton
       v-if="$route.name === 'ApplyBegin'"
       backgroundColor="#E87361"

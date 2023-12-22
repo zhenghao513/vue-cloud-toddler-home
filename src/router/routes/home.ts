@@ -62,6 +62,12 @@ const homeRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/ApplyDetail.vue'),
   },
   {
+    path: '/apply-survey',
+    name: 'ApplySurvey',
+    meta: { title: '问卷调查' },
+    component: () => import('@/views/ApplySurvey.vue'),
+  },
+  {
     path: '/assess',
     name: 'Assess',
     meta: { title: '成长评估' },

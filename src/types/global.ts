@@ -11,3 +11,17 @@ export interface UserAppointmentModel {
   phoneNumber: string
   appointmentDate: string
 }
+
+export interface ChildInfoModel {
+  childName: string
+  gender: string
+  birthday: string
+  guardian: string
+  guardianPhone: string
+  address: string
+  healthStatus: string[]
+  otherHealthStatus: string
+  educationalExpectation: string
+  hobby: string
+  specialNeedsAndSuggestions: string
+}
