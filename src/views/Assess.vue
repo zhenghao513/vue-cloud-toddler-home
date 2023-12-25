@@ -32,6 +32,7 @@
 
 .button-group__bottom :nth-child(2) {
   margin-top: 0;
+  margin-left: var(--elements-margin-vertical-m);
 }
 
 .button-group__bottom * {

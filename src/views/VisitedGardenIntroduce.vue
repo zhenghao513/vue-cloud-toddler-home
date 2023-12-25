@@ -62,6 +62,7 @@ span {
 
 .button-container :nth-child(2) {
   margin-top: 0;
+  margin-left: var(--elements-margin-vertical-m);
 }
 
 .button-container * {
