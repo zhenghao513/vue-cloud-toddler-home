@@ -213,4 +213,8 @@ const maxDate = computed(() => {
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.page-layout :deep(.slot-container) {
+  margin-top: 0;
+}
+</style>

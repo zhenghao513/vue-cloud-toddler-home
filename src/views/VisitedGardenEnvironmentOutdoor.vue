@@ -25,6 +25,10 @@
 <script setup lang="ts"></script>
 
 <style scoped>
+.page-layout :deep(.slot-container) {
+  margin-top: 0;
+}
+
 .container {
   display: flex;
   flex-direction: column;
