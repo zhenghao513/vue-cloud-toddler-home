@@ -10,7 +10,7 @@
       <h2 class="block__title">保育环境</h2>
       <van-empty />
 
-      <div class="button-container">
+      <div class="button-group__bottom">
         <AppButton @click="$router.push({ name: 'VisitedGardenAppointment' })">
           预约参观
         </AppButton>
@@ -33,18 +33,18 @@
   min-height: calc(100vh - 196px - var(--default-padding-bottom-fixed));
 }
 
-.button-container {
+.button-group__bottom {
   margin-top: auto;
   display: flex;
   justify-content: space-between;
 }
 
-.button-container :nth-child(2) {
+.button-group__bottom :nth-child(2) {
   margin-top: 0;
   margin-left: var(--elements-margin-vertical-m);
 }
 
-.button-container * {
+.button-group__bottom * {
   width: 100%;
 }
 </style>
