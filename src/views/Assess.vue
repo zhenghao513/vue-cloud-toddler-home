@@ -28,6 +28,7 @@
 .button-group__bottom {
   display: flex;
   justify-content: space-between;
+  margin-top: var(--elements-margin-horizontal-l);
 }
 
 .button-group__bottom :nth-child(2) {

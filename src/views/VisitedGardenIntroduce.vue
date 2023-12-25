@@ -55,7 +55,7 @@ span {
 }
 
 .button-group__bottom {
-  margin-top: auto;
+  margin-top: var(--elements-margin-horizontal-l);
   display: flex;
   justify-content: space-between;
 }
