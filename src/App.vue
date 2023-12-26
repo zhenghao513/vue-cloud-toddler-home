@@ -1,6 +1,6 @@
 <template>
   <AppNavbar />
-  <VanBackTop />
+  <VanBackTop bottom="20vh" />
   <RouterView />
   <AppTabbar />
 </template>
