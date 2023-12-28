@@ -4,7 +4,26 @@
       v-bind="buttonProps"
       @click="handleClick"
     >
-      <slot></slot>
+      <template
+        v-if="$slots.default"
+        #default
+      >
+        <slot name="default"></slot>
+      </template>
+
+      <template
+        v-if="$slots.icon"
+        #icon
+      >
+        <slot name="icon"></slot>
+      </template>
+
+      <template
+        v-if="$slots.loading"
+        #loading
+      >
+        <slot name="loading"></slot>
+      </template>
     </VanButton>
   </div>
 </template>
