@@ -11,12 +11,14 @@
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
+    "canvas-confetti": "^1.9.2",
     "pinia": "^2.1.7",
     "vant": "^4.8.0",
     "vue": "^3.3.4",
     "vue-router": "4"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.6.4",
     "@types/node": "^20.8.2",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
