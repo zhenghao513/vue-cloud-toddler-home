@@ -62,7 +62,7 @@ export interface ConfettiButtonProps extends ButtonProps {
    * 五彩纸屑的一系列形状。
    * 可能的值为正方形和圆形。
    * 默认是在均匀混合中使用两种形状。
-   * 你甚至可以通过提供诸如 ['circle', 'square'] 之类的值来更改组合，以使用三分之二的圆和三分之一的正方形。
+   * 你甚至可以通过提供诸如 ['circle', 'square', 'star'] 之类的值来更改组合，以使用三分之二的圆和三分之一的正方形。
    * @default ["square"]
    */
   shapes?: Shape[]
