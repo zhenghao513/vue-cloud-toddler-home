@@ -12,8 +12,8 @@
 <script setup lang="ts">
 import type { ButtonProps } from 'vant'
 import type { ConfettiButtonProps } from '@/types/component'
-import canvasConfetti from 'canvas-confetti'
-import confetti from '@/utils/confetti'
+import confetti from 'canvas-confetti'
+import launchConfetti from '@/utils/confetti'
 
 const props = withDefaults(defineProps<ConfettiButtonProps>(), {
   particleCount: 60,
@@ -77,7 +77,7 @@ const buttonProps = computed<ButtonProps>(() => {
   }
 })
 
-const confettiOptions = computed<canvasConfetti.Options>(() => {
+const confettiOptions = computed<confetti.Options>(() => {
   return {
     particleCount: props.particleCount,
     angle: props.angle,
@@ -95,7 +95,7 @@ const confettiOptions = computed<canvasConfetti.Options>(() => {
 })
 
 const handleClick = () => {
-  confetti(confettiOptions.value)
+  launchConfetti(confettiOptions.value)
 }
 </script>
 

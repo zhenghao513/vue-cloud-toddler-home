@@ -1,5 +1,5 @@
-import canvasConfetti from 'canvas-confetti'
+import confetti from 'canvas-confetti'
 
-export default function confetti(options?: canvasConfetti.Options) {
-  canvasConfetti(options)
+export default function launchConfetti(options?: confetti.Options) {
+  confetti(options)
 }
