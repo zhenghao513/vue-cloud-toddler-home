@@ -31,7 +31,8 @@ export interface ConfettiButtonProps extends ButtonProps {
   decay?: number
   /**
    * 五彩纸屑被拉下的速度有多快。
-   * 1 是全重力，0.5 是半重力等。 如果你愿意，你甚至可以使粒子上升。
+   * 1 是全重力，0.5 是半重力等。
+   * 如果你愿意，你甚至可以使粒子上升。
    * @default 1.2
    */
   gravity?: number
@@ -55,15 +56,15 @@ export interface ConfettiButtonProps extends ButtonProps {
   origin?: Origin
   /**
    * 十六进制格式的颜色字符串数组。
-   * @default ['#F76560', '#FADC19', '#14C9C9', '#722ED1', '#FF9A2E']
+   * @default ['#F76560','#FADC19','#14C9C9','#722ED1','#FF9A2E']
    */
   colors?: string[]
   /**
    * 五彩纸屑的一系列形状。
    * 可能的值为正方形和圆形。
    * 默认是在均匀混合中使用两种形状。
-   * 你甚至可以通过提供诸如 ['circle', 'square', 'star'] 之类的值来更改组合，以使用三分之二的圆和三分之一的正方形。
-   * @default ["square"]
+   * 你甚至可以通过提供诸如 ['circle', 'square', 'star'] 之类的值来更改组合，以使用三分之一的圆、三分之一的正方形和三分之一的星形。
+   * @default ['square']
    */
   shapes?: Shape[]
   /**
