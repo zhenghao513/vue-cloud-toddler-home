@@ -1,9 +1,9 @@
-import { ChildInfoModel } from '@/types/global'
+import { ChildInfo } from '@/types/info'
 
 export const useSurveyStore = defineStore('survey', () => {
-  const surveyList = ref<ChildInfoModel[]>([])
+  const surveyList = ref<ChildInfo[]>([])
 
-  const addSurvey = (survey: ChildInfoModel) => {
+  const addSurvey = (survey: ChildInfo) => {
     surveyList.value.push(survey)
   }
 

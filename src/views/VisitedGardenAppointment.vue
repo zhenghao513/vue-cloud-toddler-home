@@ -64,7 +64,7 @@
 
 <script setup lang="ts">
 import { useAppointmentStore } from '@/stores/appointment'
-import { UserAppointmentModel } from '@/types/global'
+import { AppointmentInfo } from '@/types/info'
 import { showDialog } from 'vant'
 import 'vant/es/dialog/style'
 
@@ -81,7 +81,7 @@ const onConfirm = ({ selectedValues }) => {
 }
 
 const appointmentStore = useAppointmentStore()
-const onSubmit = (values: UserAppointmentModel) => {
+const onSubmit = (values: AppointmentInfo) => {
   appointmentStore.addAppointment(values)
   showDialog({
     title: '提交成功',

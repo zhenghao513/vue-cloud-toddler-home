@@ -1,9 +1,9 @@
-import { UserAppointmentModel } from '@/types/global'
+import { AppointmentInfo } from '@/types/info'
 
 export const useAppointmentStore = defineStore('appointment', () => {
-  const appointmentList = ref<UserAppointmentModel[]>([])
+  const appointmentList = ref<AppointmentInfo[]>([])
 
-  const addAppointment = (appointment: UserAppointmentModel) => {
+  const addAppointment = (appointment: AppointmentInfo) => {
     appointmentList.value.push(appointment)
   }
 

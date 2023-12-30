@@ -74,7 +74,7 @@
 
 <script setup lang="ts">
 import { useSuggestionStore } from '@/stores/suggestion'
-import { UserSuggestionModel } from '@/types/global'
+import { SuggestionInfo } from '@/types/info'
 import { showDialog } from 'vant'
 import 'vant/es/dialog/style'
 
@@ -86,7 +86,7 @@ const title = ref('')
 const content = ref('')
 
 const suggestionStore = useSuggestionStore()
-const onSubmit = (values: UserSuggestionModel) => {
+const onSubmit = (values: SuggestionInfo) => {
   suggestionStore.addSuggestion(values)
   showDialog({
     title: '提交成功',

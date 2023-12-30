@@ -1,9 +1,9 @@
-import { UserSuggestionModel } from '@/types/global'
+import { SuggestionInfo } from '@/types/info'
 
 export const useSuggestionStore = defineStore('suggestion', () => {
-  const suggestionList = ref<UserSuggestionModel[]>([])
+  const suggestionList = ref<SuggestionInfo[]>([])
 
-  const addSuggestion = (suggestion: UserSuggestionModel) => {
+  const addSuggestion = (suggestion: SuggestionInfo) => {
     suggestionList.value.push(suggestion)
   }
 

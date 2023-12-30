@@ -1,4 +1,4 @@
-export interface UserSuggestionModel {
+export interface SuggestionInfo {
   name: string
   phoneNumber: string
   isPublicInternet: boolean
@@ -6,13 +6,13 @@ export interface UserSuggestionModel {
   content: string
 }
 
-export interface UserAppointmentModel {
+export interface AppointmentInfo {
   name: string
   phoneNumber: string
   appointmentDate: string
 }
 
-export interface ChildInfoModel {
+export interface ChildInfo {
   childName: string
   gender: string
   birthday: string
