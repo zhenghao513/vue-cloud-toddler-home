@@ -1,7 +1,11 @@
 <template>
   <AppNavbar />
   <VanBackTop bottom="20vh" />
-  <RouterView />
+  <RouterView v-slot="{ Component }">
+    <Transition name="van-fade">
+      <component :is="Component" />
+    </Transition>
+  </RouterView>
   <AppTabbar />
 </template>
 
