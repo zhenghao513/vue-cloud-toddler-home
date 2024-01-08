@@ -17,8 +17,10 @@ const isSecondaryPage = computed(() => {
 
 <style scoped>
 .page-layout {
-  padding-top: 46px;
-  padding-bottom: calc(50px + var(--default-padding-bottom-fixed));
+  padding-top: var(--van-nav-bar-height);
+  padding-bottom: calc(
+    var(--van-tabbar-height) + var(--default-padding-bottom-fixed)
+  );
   margin-top: 0;
   min-height: 100vh;
 }
