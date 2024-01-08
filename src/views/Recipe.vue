@@ -122,7 +122,10 @@ onMounted(async () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 70px);
+  min-height: calc(
+    100vh - var(--van-nav-bar-height) - var(--default-padding-top) -
+      var(--default-padding-bottom-fixed)
+  );
 }
 
 .grid {
