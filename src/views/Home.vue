@@ -47,6 +47,7 @@ const gridItems: GridItemProps[] = [
     replace: false,
     text: '精彩瞬间',
     icon: 'icon-a-027_tupian-13',
+    to: { name: 'Photo' },
   },
   {
     dot: false,

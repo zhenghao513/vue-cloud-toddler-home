@@ -26,6 +26,12 @@ const homeRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/Recipe.vue'),
   },
   {
+    path: '/photo',
+    name: 'Photo',
+    meta: { title: '精彩瞬间' },
+    component: () => import('@/views/Photo.vue'),
+  },
+  {
     path: '/visited-garden',
     name: 'VisitedGarden',
     meta: { title: '园所参观' },
