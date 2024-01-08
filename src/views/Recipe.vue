@@ -5,7 +5,18 @@
         v-if="isLoading"
         class="wrapper"
       >
-        <van-loading color="#1989fa" />
+        <van-loading
+          color="#1989fa"
+          vertical
+          :size="96"
+        >
+          <div
+            ref="copywritingRef"
+            class="copywriting"
+          >
+            {{ loadingText }}
+          </div>
+        </van-loading>
       </div>
 
       <VanList
@@ -109,6 +120,47 @@ const onLoad = async () => {
 onMounted(async () => {
   await fetchData()
 })
+
+const copywritingRef = ref<HTMLDivElement | null>(null)
+const copywritingList = ref([
+  '青，出于蓝而胜于蓝；冰，水为之而寒于水。',
+  '剑阁峥嵘而崔嵬，一夫当关，万夫莫开。',
+])
+const copywritingIndex = ref(0)
+const loadingText = computed(() => {
+  return copywritingList.value[
+    copywritingIndex.value % copywritingList.value.length
+  ]
+})
+
+let updateIndex = 0
+let updateOpacity = 0
+watch(
+  isLoading,
+  (newValue) => {
+    if (newValue) {
+      // 7s 之后更新下一条，2s 留给淡出动画
+      setTimeout(() => {
+        updateIndex = setInterval(() => {
+          if (copywritingRef.value) {
+            copywritingRef.value.style.opacity = '1'
+          }
+          copywritingIndex.value++
+        }, 5000)
+      }, 2000)
+
+      updateOpacity = setInterval(() => {
+        if (copywritingRef.value) {
+          copywritingRef.value.style.opacity = '0'
+        }
+      }, 5000)
+    } else {
+      clearInterval(updateIndex)
+      clearInterval(updateOpacity)
+    }
+  },
+  { immediate: true },
+)
 </script>
 
 <style scoped>
@@ -136,5 +188,10 @@ onMounted(async () => {
 
 .item {
   margin-top: 0;
+}
+
+.copywriting {
+  opacity: 1;
+  transition: opacity 2s;
 }
 </style>
