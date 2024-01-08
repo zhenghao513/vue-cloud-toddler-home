@@ -9,6 +9,7 @@ import {
 } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
+  base: '/vue-cloud-toddler-home/',
   plugins: [
     vue(),
     AutoImport({
