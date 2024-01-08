@@ -40,6 +40,7 @@ const gridItems: GridItemProps[] = [
     replace: false,
     text: '今日菜谱',
     icon: 'icon-a-027_gouwu-04',
+    to: { name: 'Recipe' },
   },
   {
     dot: false,

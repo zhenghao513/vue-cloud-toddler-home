@@ -3,7 +3,10 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { VantResolver } from 'unplugin-vue-components/resolvers'
+import {
+  VantResolver,
+  AntDesignVueResolver,
+} from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   plugins: [
@@ -33,7 +36,12 @@ export default defineConfig({
       },
     }),
     Components({
-      resolvers: [VantResolver()],
+      resolvers: [
+        VantResolver(),
+        AntDesignVueResolver({
+          importStyle: false, // css in js
+        }),
+      ],
       dirs: ['src/components', 'src/layouts'],
       dts: true,
       types: [

@@ -4,6 +4,7 @@ import App from './App.vue'
 import router from './router'
 import '@/assets/js/iconfont_svg.js'
 import { createPinia } from 'pinia'
+import '@/api/interceptors'
 
 const pinia = createPinia()
 const app = createApp(App)

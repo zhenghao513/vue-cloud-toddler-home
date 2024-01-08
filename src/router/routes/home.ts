@@ -20,6 +20,12 @@ const homeRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/CharacteristicCourse.vue'),
   },
   {
+    path: '/recipe',
+    name: 'Recipe',
+    meta: { title: '今日菜谱' },
+    component: () => import('@/views/Recipe.vue'),
+  },
+  {
     path: '/visited-garden',
     name: 'VisitedGarden',
     meta: { title: '园所参观' },
