@@ -1,8 +1,7 @@
 /* eslint-disable no-return-assign */
-// @ts-nocheck: 忽略这个编译错误是可以的
 export function useFetch<T>(url: string | Ref<string> | (() => string)) {
-  const data = ref<T>(null)
-  const error = ref<T>(null)
+  const data: Ref<T | null> = ref(null)
+  const error: Ref<T | null> = ref(null)
 
   const fetchData = () => {
     data.value = null
