@@ -45,10 +45,11 @@
             </div>
           </template>
 
-          <template #default="{ item, style }">
+          <template #default="{ item, index, style }">
             <div
               class="item"
               :style="style"
+              @click="handlePreview(index)"
             >
               <ACard
                 hoverable
@@ -74,6 +75,8 @@
 
 <script setup lang="ts">
 import Grid from 'vue-virtual-scroll-grid'
+import { showImagePreview } from 'vant'
+import 'vant/es/image-preview/style'
 import { queryRecipeList } from '@/api/list'
 
 interface Recipe {
@@ -161,6 +164,13 @@ watch(
   },
   { immediate: true },
 )
+
+const handlePreview = (index: number) => {
+  showImagePreview({
+    images: recipes.value.map((recipe) => recipe.imageUrl),
+    startPosition: index,
+  })
+}
 </script>
 
 <style scoped>

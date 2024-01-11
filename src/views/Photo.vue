@@ -26,10 +26,11 @@
             </div>
           </template>
 
-          <template #default="{ item, style }">
+          <template #default="{ item, index, style }">
             <div
               class="item"
               :style="style"
+              @click="handlePreview(index)"
             >
               <ACard
                 hoverable
@@ -57,6 +58,8 @@
 
 <script setup lang="ts">
 import Grid from 'vue-virtual-scroll-grid'
+import { showImagePreview } from 'vant'
+import 'vant/es/image-preview/style'
 import { queryPhotoList } from '@/api/list'
 
 const getRandomDateTime = () => {
@@ -67,10 +70,8 @@ const getRandomDateTime = () => {
 }
 
 interface Photo {
-  id: number
-  title: string
-  ingredients: string
-  imageUrl: string
+  filename: string
+  url: string
 }
 
 const photos = ref<Photo[]>([])
@@ -106,6 +107,13 @@ const onLoad = async () => {
 onMounted(async () => {
   await fetchData()
 })
+
+const handlePreview = (index: number) => {
+  showImagePreview({
+    images: photos.value.map((photo) => photo.url),
+    startPosition: index,
+  })
+}
 </script>
 
 <style scoped>
