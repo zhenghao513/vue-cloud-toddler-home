@@ -13,23 +13,23 @@
 
     <div class="button-wrapper">
       <VanButton
-        :disabled="signIn"
+        :disabled="signInState"
         @click="handleSignIn"
       >
         <span
-          v-show="!signIn"
+          v-show="!signInState"
           class="button-text"
         >
           签到
         </span>
         <span class="button-time">{{ currentTime }}</span>
-        <span v-show="signIn">已签到</span>
+        <span v-show="signInState">已签到</span>
       </VanButton>
     </div>
 
     <Transition name="van-fade">
       <span
-        v-show="!signIn"
+        v-show="!signInState"
         class="tips"
       >
         今日你还未签到
@@ -83,15 +83,16 @@ onBeforeUnmount(() => {
   clearInterval(intervalID)
 })
 
-const { signIn } = storeToRefs(useSignInStore())
-function handleSignIn() {
+const signInStore = useSignInStore()
+const { signInState } = storeToRefs(signInStore)
+const { setSignInState } = signInStore
+const handleSignIn = () => {
   showLoadingToast({
     message: '加载中...',
     forbidClick: true,
     onClose() {
       showSuccessToast('签到成功')
-
-      signIn.value = true
+      setSignInState(true)
     },
   })
 }

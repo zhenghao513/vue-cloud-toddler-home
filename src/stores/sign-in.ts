@@ -1,5 +1,8 @@
 export const useSignInStore = defineStore('sign-in', () => {
-  const signIn = ref(false)
+  const signInState = ref(false)
+  const setSignInState = (value: boolean) => {
+    signInState.value = value
+  }
 
-  return { signIn }
+  return { signInState, setSignInState }
 })
