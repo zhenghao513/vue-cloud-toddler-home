@@ -1,6 +1,6 @@
 :root {
   box-sizing: border-box;
-  font-size: calc(100vw / 10);
+  font-size: 10vw;
 
   /* 屏幕边缘间隔 */
   --default-padding-start: 12px;
