@@ -11,7 +11,7 @@
           :size="96"
         >
           <div
-            ref="copywritingRef"
+            ref="loadingTextRef"
             class="copywriting"
           >
             {{ loadingText }}
@@ -124,42 +124,42 @@ onMounted(async () => {
   await fetchData()
 })
 
-const copywritingRef = ref<HTMLDivElement | null>(null)
-const copywritingList = ref([
+const loadingTextRef = ref<HTMLDivElement | null>(null)
+const loadingTextList = ref([
   '青，出于蓝而胜于蓝；冰，水为之而寒于水。',
   '剑阁峥嵘而崔嵬，一夫当关，万夫莫开。',
 ])
-const copywritingIndex = ref(0)
+const loadingTextIndex = ref(0)
 const loadingText = computed(() => {
-  return copywritingList.value[
-    copywritingIndex.value % copywritingList.value.length
+  return loadingTextList.value[
+    loadingTextIndex.value % loadingTextList.value.length
   ]
 })
 
-let updateIndex = 0
-let updateOpacity = 0
+let updateIndexTimer = 0
+let updateOpacityTimer = 0
 watch(
   isLoading,
   (newValue) => {
     if (newValue) {
       // 7s 之后更新下一条，2s 留给淡出动画
       setTimeout(() => {
-        updateIndex = setInterval(() => {
-          if (copywritingRef.value) {
-            copywritingRef.value.style.opacity = '1'
+        updateIndexTimer = setInterval(() => {
+          if (loadingTextRef.value) {
+            loadingTextRef.value.style.opacity = '1'
           }
-          copywritingIndex.value++
+          loadingTextIndex.value++
         }, 5000)
       }, 2000)
 
-      updateOpacity = setInterval(() => {
-        if (copywritingRef.value) {
-          copywritingRef.value.style.opacity = '0'
+      updateOpacityTimer = setInterval(() => {
+        if (loadingTextRef.value) {
+          loadingTextRef.value.style.opacity = '0'
         }
       }, 5000)
     } else {
-      clearInterval(updateIndex)
-      clearInterval(updateOpacity)
+      clearInterval(updateIndexTimer)
+      clearInterval(updateOpacityTimer)
     }
   },
   { immediate: true },
