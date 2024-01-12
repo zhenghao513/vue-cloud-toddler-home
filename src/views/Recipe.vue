@@ -12,7 +12,7 @@
         >
           <div
             ref="loadingTextRef"
-            class="copywriting"
+            class="loading__text"
           >
             {{ loadingText }}
           </div>
@@ -200,7 +200,7 @@ const handlePreview = (index: number) => {
   margin-top: 0;
 }
 
-.copywriting {
+.loading__text {
   opacity: 1;
   transition: opacity 2s;
 }
