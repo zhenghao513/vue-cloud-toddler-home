@@ -16,14 +16,24 @@
         :disabled="signInState"
         @click="handleSignIn"
       >
-        <span
-          v-show="!signInState"
-          class="button__text"
+        <Transition
+          name="slide-up"
+          mode="out-in"
         >
-          签到
-        </span>
+          <span
+            v-if="!signInState"
+            class="button__text"
+          >
+            签到
+          </span>
+          <span
+            v-else
+            class="button__text"
+          >
+            已签到
+          </span>
+        </Transition>
         <span class="button__time">{{ currentTime }}</span>
-        <span v-show="signInState">已签到</span>
       </VanButton>
     </div>
 
@@ -127,8 +137,6 @@ const handleSignIn = () => {
 .van-button :deep(.van-button__text) {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .button__text {
@@ -151,5 +159,20 @@ const handleSignIn = () => {
 .hint__text {
   font-size: 10px;
   color: #666666;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.25s ease-out;
+}
+
+.slide-up-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
 }
 </style>
