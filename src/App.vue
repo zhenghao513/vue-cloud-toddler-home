@@ -2,7 +2,10 @@
   <AppNavbar />
   <VanBackTop bottom="20vh" />
   <RouterView v-slot="{ Component }">
-    <Transition name="van-fade">
+    <Transition
+      name="van-fade"
+      mode="out-in"
+    >
       <component :is="Component" />
     </Transition>
   </RouterView>
