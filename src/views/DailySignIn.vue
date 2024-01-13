@@ -1,6 +1,6 @@
 <template>
   <PageLayout>
-    <div class="wrapper">
+    <div class="noticebar">
       <VanNoticeBar
         :text="currentDate"
         left-icon="calendar-o"
@@ -11,18 +11,18 @@
 
     <AppMapContainer :center="[lng, lat]" />
 
-    <div class="button-wrapper">
+    <div class="button">
       <VanButton
         :disabled="signInState"
         @click="handleSignIn"
       >
         <span
           v-show="!signInState"
-          class="button-text"
+          class="button__text"
         >
           签到
         </span>
-        <span class="button-time">{{ currentTime }}</span>
+        <span class="button__time">{{ currentTime }}</span>
         <span v-show="signInState">已签到</span>
       </VanButton>
     </div>
@@ -30,13 +30,13 @@
     <Transition name="van-fade">
       <span
         v-show="!signInState"
-        class="tips"
+        class="hint__text"
       >
         今日你还未签到
       </span>
     </Transition>
 
-    <div class="wrapper">
+    <div class="noticebar">
       <VanNoticeBar
         color="#1989fa"
         background="#ecf9ff"
@@ -112,7 +112,7 @@ const handleSignIn = () => {
   margin-top: 0;
 }
 
-.button-wrapper {
+.button {
   margin-top: 1em;
 }
 
@@ -131,24 +131,24 @@ const handleSignIn = () => {
   align-items: center;
 }
 
-.button-text {
+.button__text {
   font-size: 24px;
 }
 
-.button-time {
+.button__time {
   margin-top: 0;
   font-size: 30px;
 }
 
-.wrapper {
+.noticebar {
   min-width: 100%;
 }
 
-.wrapper:last-child {
+.noticebar:last-child {
   margin-top: auto;
 }
 
-.tips {
+.hint__text {
   font-size: 10px;
   color: #666666;
 }
