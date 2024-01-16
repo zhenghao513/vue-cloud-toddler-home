@@ -16,7 +16,7 @@ const route = useRoute()
 const showLeftArrow = computed(() => {
   // 防止刷新时左侧箭头闪烁
   if (route.name) {
-    return !['home', 'user'].includes(route.name as string)
+    return !['Home', 'User'].includes(route.name as string)
   }
   return false
 })

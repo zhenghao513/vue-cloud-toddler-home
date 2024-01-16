@@ -5,14 +5,14 @@ import userRoutes from './routes/user'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     meta: { title: '首页' },
     component: () => import('@/views/Home.vue'),
     alias: '/home',
   },
   {
     path: '/user',
-    name: 'user',
+    name: 'User',
     meta: { title: '我' },
     component: () => import('@/views/User.vue'),
   },

@@ -11,7 +11,7 @@
 const route = useRoute()
 
 const isReturnable = computed(() => {
-  return !['home', 'user'].includes(route.name as string)
+  return !['Home', 'User'].includes(route.name as string)
 })
 </script>
 
