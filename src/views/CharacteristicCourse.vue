@@ -83,4 +83,8 @@ const pageProvider = (): Promise<unknown[]> =>
 .item {
   margin-top: 0;
 }
+
+.page-layout :deep(.slot-container) {
+  margin-top: 0.5em;
+}
 </style>
