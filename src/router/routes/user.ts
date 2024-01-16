@@ -13,6 +13,12 @@ const userRoutes: RouteRecordRaw[] = [
     meta: { title: '预约参观' },
     component: () => import('@/views/VisitedGardenAppointment.vue'),
   },
+  {
+    path: '/userinfo-edit',
+    name: 'UserinfoEdit',
+    meta: { title: '编辑资料' },
+    component: () => import('@/views/UserinfoEdit.vue'),
+  },
 ]
 
 export default userRoutes
