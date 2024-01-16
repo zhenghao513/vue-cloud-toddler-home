@@ -1,6 +1,6 @@
 <template>
   <div
-    class="block"
+    class="block__button"
     :style="{ backgroundColor: props.backgroundColor }"
     @click="$emit('click')"
   >
@@ -18,7 +18,7 @@ const emits = defineEmits(['click'])
 </script>
 
 <style scoped>
-.block {
+.block__button {
   background-color: #d4bfb8;
   border-radius: 14px;
   color: #fff;
@@ -27,7 +27,7 @@ const emits = defineEmits(['click'])
   text-align: center;
 }
 
-.block:active {
+.block__button:active {
   color: rgba(255, 255, 255, 0.5);
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div
     id="container"
-    class="map-container"
+    class="container__map"
   ></div>
 </template>
 

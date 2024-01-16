@@ -54,7 +54,7 @@ body * + * {
 body * + *[class^='van-'],
 body * + *[class^='ant-'],
 body > * + *,
-.map-container * + * {
+.container__map * + * {
   margin-top: 0;
 }
 

@@ -116,7 +116,7 @@ const handleSignIn = () => {
   padding-bottom: 0;
 }
 
-.map-container {
+.container__map {
   min-width: 100%;
   min-height: 300px;
   margin-top: 0;
