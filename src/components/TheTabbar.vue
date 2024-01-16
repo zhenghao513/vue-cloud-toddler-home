@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import type { TabbarItemProps } from 'vant'
 
-const active = ref('home')
+const active = ref('Home')
 
 interface TabbarItem extends TabbarItemProps {
   text?: string
@@ -31,17 +31,17 @@ const tabbarItems: TabbarItem[] = [
     dot: false,
     replace: false,
     text: '首页',
-    name: 'home',
+    name: 'Home',
     icon: 'home-o',
-    to: { name: 'home' },
+    to: { name: 'Home' },
   },
   {
     dot: false,
     replace: false,
     text: '我',
-    name: 'user',
+    name: 'User',
     icon: 'user-o',
-    to: '/user',
+    to: { name: 'User' },
   },
 ]
 
