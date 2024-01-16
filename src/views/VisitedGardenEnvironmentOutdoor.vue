@@ -3,7 +3,7 @@
     backgroundColor="#ED955F"
     title="室外环境"
   >
-    <div class="container">
+    <div class="title-bar-container">
       <h2 class="block__title">整体概览</h2>
       <van-empty />
 
@@ -27,17 +27,6 @@
 <style scoped>
 .page-layout :deep(.slot-container) {
   margin-top: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 0;
-  min-height: calc(
-    100vh - var(--van-nav-bar-height) - 150px -
-      var(--default-padding-bottom-fixed)
-  );
 }
 
 .button-group__bottom {

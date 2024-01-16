@@ -3,7 +3,7 @@
     backgroundColor="#92C48D"
     title="成长评估"
   >
-    <div class="container">
+    <div class="title-bar-container">
       <h2 class="block__title"></h2>
 
       <div class="button-group__bottom">
@@ -19,17 +19,6 @@
 <style scoped>
 .page-layout :deep(.slot-container) {
   margin-top: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 0;
-  min-height: calc(
-    100vh - var(--van-nav-bar-height) - 150px -
-      var(--default-padding-bottom-fixed)
-  );
 }
 
 .button-group__bottom {
