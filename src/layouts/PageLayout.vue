@@ -1,7 +1,7 @@
 <template>
   <div
     class="page-layout"
-    :class="{ 'page-layout--secondary': isSecondaryPage }"
+    :class="{ 'page-layout-returnable': isReturnable }"
   >
     <slot></slot>
   </div>
@@ -10,7 +10,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const isSecondaryPage = computed(() => {
+const isReturnable = computed(() => {
   return !['home', 'user'].includes(route.name as string)
 })
 </script>
@@ -25,7 +25,7 @@ const isSecondaryPage = computed(() => {
   min-height: 100vh;
 }
 
-.page-layout--secondary {
+.page-layout-returnable {
   padding-bottom: var(--default-padding-bottom-fixed);
 }
 </style>
