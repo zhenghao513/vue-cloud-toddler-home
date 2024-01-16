@@ -3,7 +3,7 @@
     <div class="userinfo__avatar--circle">
       <span class="userinfo__avatar-image">
         <img
-          src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
+          :src="avatarUrl"
           alt="avatar"
         />
       </span>
@@ -11,7 +11,11 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  avatarUrl: string
+}>()
+</script>
 
 <style scoped>
 .userinfo__avatar {

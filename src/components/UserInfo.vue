@@ -1,10 +1,10 @@
 <template>
   <div class="userinfo">
-    <AppAvatar />
+    <AppAvatar :avatar-url="avatar" />
 
     <div class="userinfo__inner">
       <div class="userinfo__username">
-        <span>{{ username ?? 'Administrator' }}</span>
+        <span>{{ username }}</span>
       </div>
       <div class="userinfo__edit-button">
         <VanButton
@@ -22,7 +22,9 @@
 </template>
 
 <script setup lang="ts">
-const username = ref<string>()
+import { useUserinfoStore } from '@/stores/userinfo'
+
+const { avatar, username } = storeToRefs(useUserinfoStore())
 </script>
 
 <style scoped>
@@ -48,6 +50,7 @@ const username = ref<string>()
   margin-right: 8px;
   color: rgb(78, 89, 105);
   font-size: 30px;
+  word-break: break-all;
 }
 
 .userinfo__edit-button {
