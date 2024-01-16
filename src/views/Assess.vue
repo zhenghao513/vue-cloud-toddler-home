@@ -3,13 +3,11 @@
     backgroundColor="#92C48D"
     title="成长评估"
   >
-    <div class="title-bar-container">
-      <h2 class="block__title"></h2>
+    <h2 class="block__title"></h2>
 
-      <div class="button-group__bottom">
-        <AppButton>报告示例</AppButton>
-        <AppButton>订阅报告</AppButton>
-      </div>
+    <div class="button-group__bottom">
+      <AppButton>报告示例</AppButton>
+      <AppButton>订阅报告</AppButton>
     </div>
   </TitlebarLayout>
 </template>
@@ -17,10 +15,6 @@
 <script setup lang="ts"></script>
 
 <style scoped>
-.page-layout :deep(.slot-container) {
-  margin-top: 0;
-}
-
 .button-group__bottom {
   display: flex;
   justify-content: space-between;

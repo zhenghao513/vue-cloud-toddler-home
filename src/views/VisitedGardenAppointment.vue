@@ -90,8 +90,4 @@ const onSubmit = (values: AppointmentInfo) => {
 }
 </script>
 
-<style scoped>
-.page-layout :deep(.slot-container) {
-  margin-top: 0;
-}
-</style>
+<style scoped></style>

@@ -3,21 +3,19 @@
     backgroundColor="#ED955F"
     title="室外环境"
   >
-    <div class="title-bar-container">
-      <h2 class="block__title">整体概览</h2>
-      <van-empty />
+    <h2 class="block__title">整体概览</h2>
+    <van-empty />
 
-      <h2 class="block__title">大型玩具</h2>
-      <van-empty />
+    <h2 class="block__title">大型玩具</h2>
+    <van-empty />
 
-      <div class="button-group__bottom">
-        <AppButton @click="$router.push({ name: 'VisitedGardenAppointment' })">
-          预约参观
-        </AppButton>
-        <AppButton @click="$router.push({ name: 'Contact' })">
-          了解更多
-        </AppButton>
-      </div>
+    <div class="button-group__bottom">
+      <AppButton @click="$router.push({ name: 'VisitedGardenAppointment' })">
+        预约参观
+      </AppButton>
+      <AppButton @click="$router.push({ name: 'Contact' })">
+        了解更多
+      </AppButton>
     </div>
   </TitlebarLayout>
 </template>
@@ -25,10 +23,6 @@
 <script setup lang="ts"></script>
 
 <style scoped>
-.page-layout :deep(.slot-container) {
-  margin-top: 0;
-}
-
 .button-group__bottom {
   margin-top: var(--elements-margin-horizontal-l);
   display: flex;

@@ -3,30 +3,28 @@
     backgroundColor="#46B1E3"
     title="联系我们"
   >
-    <div class="title-bar-container">
-      <h2 class="block__title">办学宗旨和办学理念</h2>
-      <span class="block__content">
-        我们的幼儿园以孩子为中心，致力于提供一个充满乐趣、安全、温馨的学习环境，让孩子们在这里快乐成长，发展潜力，培养良好的学习习惯和社交技能。我们注重培养孩子们的创造力、想象力和批判性思维，通过丰富多彩的活动和课程，激发他们的学习兴趣和好奇心。我们寓教于乐，让孩子们在轻松愉快的氛围中学习知识，提高技能。我们注重培养孩子们的全面发展，包括身体、智力、情感和社会技能等方面。我们与家长密切合作，共同为孩子的成长和发展努力。
-      </span>
-      <h2 class="block__title">学校荣誉</h2>
-      <VanEmpty />
+    <h2 class="block__title">办学宗旨和办学理念</h2>
+    <span class="block__content">
+      我们的幼儿园以孩子为中心，致力于提供一个充满乐趣、安全、温馨的学习环境，让孩子们在这里快乐成长，发展潜力，培养良好的学习习惯和社交技能。我们注重培养孩子们的创造力、想象力和批判性思维，通过丰富多彩的活动和课程，激发他们的学习兴趣和好奇心。我们寓教于乐，让孩子们在轻松愉快的氛围中学习知识，提高技能。我们注重培养孩子们的全面发展，包括身体、智力、情感和社会技能等方面。我们与家长密切合作，共同为孩子的成长和发展努力。
+    </span>
+    <h2 class="block__title">学校荣誉</h2>
+    <VanEmpty />
 
-      <h2 class="block__title">教学优势</h2>
-      <div class="feature-wrapper">
-        <div class="circle-shape">爱心</div>
-        <div class="circle-shape">耐心</div>
-        <div class="circle-shape">责任心</div>
-      </div>
-
-      <VanCellGroup inset>
-        <VanCell
-          v-for="item in data?.contactInformation"
-          :key="item.title"
-          :title="item.title"
-          :value="item.value"
-        />
-      </VanCellGroup>
+    <h2 class="block__title">教学优势</h2>
+    <div class="feature-wrapper">
+      <div class="circle-shape">爱心</div>
+      <div class="circle-shape">耐心</div>
+      <div class="circle-shape">责任心</div>
     </div>
+
+    <VanCellGroup inset>
+      <VanCell
+        v-for="item in data?.contactInformation"
+        :key="item.title"
+        :title="item.title"
+        :value="item.value"
+      />
+    </VanCellGroup>
   </TitlebarLayout>
 </template>
 
@@ -46,10 +44,6 @@ const { data } = useFetch<ContactInformation>(
 </script>
 
 <style scoped>
-.page-layout :deep(.slot-container) {
-  margin-top: 0;
-}
-
 .title-bar-container * + * {
   margin-top: 0;
 }

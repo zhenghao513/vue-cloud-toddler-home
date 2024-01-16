@@ -3,25 +3,23 @@
     backgroundColor="#ED955F"
     title="园所介绍"
   >
-    <div class="title-bar-container">
-      <h2 class="block__title">园所简介</h2>
+    <h2 class="block__title">园所简介</h2>
 
-      <span
-        v-for="section in data?.paragraphs"
-        :key="section"
-        class="block__content"
-      >
-        {{ section }}
-      </span>
+    <span
+      v-for="section in data?.paragraphs"
+      :key="section"
+      class="block__content"
+    >
+      {{ section }}
+    </span>
 
-      <div class="button-group__bottom">
-        <AppButton @click="$router.push({ name: 'VisitedGardenAppointment' })">
-          预约参观
-        </AppButton>
-        <AppButton @click="$router.push({ name: 'Contact' })">
-          了解更多
-        </AppButton>
-      </div>
+    <div class="button-group__bottom">
+      <AppButton @click="$router.push({ name: 'VisitedGardenAppointment' })">
+        预约参观
+      </AppButton>
+      <AppButton @click="$router.push({ name: 'Contact' })">
+        了解更多
+      </AppButton>
     </div>
   </TitlebarLayout>
 </template>
@@ -38,10 +36,6 @@ const { data } = useFetch<GardenIntroduce>(
 </script>
 
 <style scoped>
-.page-layout :deep(.slot-container) {
-  margin-top: 0;
-}
-
 span:nth-child(2) {
   margin-top: 0;
 }
