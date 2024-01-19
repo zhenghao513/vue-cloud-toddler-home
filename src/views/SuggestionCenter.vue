@@ -87,7 +87,7 @@ const content = ref('')
 
 const suggestionStore = useSuggestionStore()
 const onSubmit = (values: SuggestionFormModel) => {
-  suggestionStore.addSuggestion(values)
+  suggestionStore.add(values)
   showDialog({
     title: '提交成功',
     message: '我们会在24小时内处理您的请求，请耐心等待。',

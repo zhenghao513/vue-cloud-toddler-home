@@ -1,11 +1,8 @@
-import { SuggestionFormModel } from '@/types/form.ts'
+import type { SuggestionFormModel } from '@/types/form.ts'
+import { useFormList } from '@/composables/useFormList.ts'
 
 export const useSuggestionStore = defineStore('suggestion', () => {
-  const suggestionList = ref<SuggestionFormModel[]>([])
+  const { list, add } = useFormList<SuggestionFormModel>()
 
-  const addSuggestion = (suggestion: SuggestionFormModel) => {
-    suggestionList.value.push(suggestion)
-  }
-
-  return { suggestionList, addSuggestion }
+  return { list, add }
 })

@@ -197,7 +197,7 @@ const specialNeedsAndSuggestions = ref('')
 
 const surveyStore = useSurveyStore()
 const onSubmit = (values: ToddlerInfoModel) => {
-  surveyStore.addSurvey(values)
+  surveyStore.add(values)
   showDialog({
     title: '提交成功',
     message: '我们会在24小时内处理您的请求，请耐心等待。',

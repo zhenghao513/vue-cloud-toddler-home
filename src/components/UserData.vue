@@ -24,9 +24,9 @@ const signInCount = computed(() => {
   return new Date().getDate() - (signInState.value ? 0 : 1)
 })
 
-const { suggestionList } = storeToRefs(useSuggestionStore())
+const { list } = storeToRefs(useSuggestionStore())
 const suggestionCount = computed(() => {
-  return suggestionList.value.length
+  return list.value.length
 })
 
 const cloudCoinCount = computed(() => {

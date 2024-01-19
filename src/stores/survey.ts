@@ -1,11 +1,8 @@
 import { ToddlerInfoModel } from '@/types/form.ts'
+import { useFormList } from '@/composables/useFormList.ts'
 
 export const useSurveyStore = defineStore('survey', () => {
-  const surveyList = ref<ToddlerInfoModel[]>([])
+  const { list, add } = useFormList<ToddlerInfoModel>()
 
-  const addSurvey = (survey: ToddlerInfoModel) => {
-    surveyList.value.push(survey)
-  }
-
-  return { surveyList, addSurvey }
+  return { list, add }
 })

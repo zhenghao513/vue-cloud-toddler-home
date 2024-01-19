@@ -82,7 +82,7 @@ const onConfirm = ({ selectedValues }) => {
 
 const appointmentStore = useAppointmentStore()
 const onSubmit = (values: AppointmentFormModel) => {
-  appointmentStore.addAppointment(values)
+  appointmentStore.add(values)
   showDialog({
     title: '提交成功',
     message: '我们会在24小时内处理您的请求，请耐心等待。',

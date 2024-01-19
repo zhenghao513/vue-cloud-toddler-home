@@ -1,11 +1,8 @@
 import { AppointmentFormModel } from '@/types/form.ts'
+import { useFormList } from '@/composables/useFormList.ts'
 
 export const useAppointmentStore = defineStore('appointment', () => {
-  const appointmentList = ref<AppointmentFormModel[]>([])
+  const { list, add } = useFormList<AppointmentFormModel>()
 
-  const addAppointment = (appointment: AppointmentFormModel) => {
-    appointmentList.value.push(appointment)
-  }
-
-  return { appointmentList, addAppointment }
+  return { appointmentList: list, add }
 })
