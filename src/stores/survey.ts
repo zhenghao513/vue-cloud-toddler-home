@@ -1,9 +1,9 @@
-import { ChildInfo } from '@/types/info'
+import { ToddlerInfoModel } from '@/types/form.ts'
 
 export const useSurveyStore = defineStore('survey', () => {
-  const surveyList = ref<ChildInfo[]>([])
+  const surveyList = ref<ToddlerInfoModel[]>([])
 
-  const addSurvey = (survey: ChildInfo) => {
+  const addSurvey = (survey: ToddlerInfoModel) => {
     surveyList.value.push(survey)
   }
 

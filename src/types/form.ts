@@ -1,18 +1,19 @@
-export interface SuggestionInfo {
+export interface BaseFormModel {
   name: string
   phoneNumber: string
+}
+
+export interface SuggestionFormModel extends BaseFormModel {
   isPublicInternet: boolean
   title: string
   content: string
 }
 
-export interface AppointmentInfo {
-  name: string
-  phoneNumber: string
+export interface AppointmentFormModel extends BaseFormModel {
   appointmentDate: string
 }
 
-export interface ChildInfo {
+export interface ToddlerInfoModel {
   childName: string
   gender: string
   birthday: string

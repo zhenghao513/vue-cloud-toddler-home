@@ -169,7 +169,7 @@
 
 <script setup lang="ts">
 import { useSurveyStore } from '@/stores/survey'
-import { ChildInfo } from '@/types/info'
+import { ToddlerInfoModel } from '@/types/form.ts'
 import { showDialog } from 'vant'
 import 'vant/es/dialog/style'
 
@@ -196,7 +196,7 @@ const hobby = ref('')
 const specialNeedsAndSuggestions = ref('')
 
 const surveyStore = useSurveyStore()
-const onSubmit = (values: ChildInfo) => {
+const onSubmit = (values: ToddlerInfoModel) => {
   surveyStore.addSurvey(values)
   showDialog({
     title: '提交成功',

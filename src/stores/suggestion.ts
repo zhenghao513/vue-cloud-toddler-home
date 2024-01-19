@@ -1,9 +1,9 @@
-import { SuggestionInfo } from '@/types/info'
+import { SuggestionFormModel } from '@/types/form.ts'
 
 export const useSuggestionStore = defineStore('suggestion', () => {
-  const suggestionList = ref<SuggestionInfo[]>([])
+  const suggestionList = ref<SuggestionFormModel[]>([])
 
-  const addSuggestion = (suggestion: SuggestionInfo) => {
+  const addSuggestion = (suggestion: SuggestionFormModel) => {
     suggestionList.value.push(suggestion)
   }
 
