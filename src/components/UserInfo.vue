@@ -1,12 +1,12 @@
 <template>
-  <div class="userinfo">
-    <AppAvatar :avatar-url="avatar" />
+  <div class="user-info">
+    <UserAvatar :avatar-url="avatar" />
 
-    <div class="userinfo__inner">
-      <div class="userinfo__username">
+    <div class="user-info__inner">
+      <div class="user-info__nickname">
         <span>{{ username }}</span>
       </div>
-      <div class="userinfo__edit-button">
+      <div class="user-info__edit-button">
         <VanButton
           type="primary"
           size="small"
@@ -28,7 +28,7 @@ const { avatar, username } = storeToRefs(useUserinfoStore())
 </script>
 
 <style scoped>
-.userinfo {
+.user-info {
   display: flex;
   flex-wrap: nowrap;
   font-size: 14px;
@@ -37,23 +37,23 @@ const { avatar, username } = storeToRefs(useUserinfoStore())
   background-color: white;
 }
 
-.userinfo * + * {
+.user-info * + * {
   margin-top: 0;
 }
 
-.userinfo__inner {
+.user-info__inner {
   flex: 1;
   display: flex;
 }
 
-.userinfo__username {
+.user-info__nickname {
   margin-right: 8px;
   color: rgb(78, 89, 105);
   font-size: 30px;
   word-break: break-all;
 }
 
-.userinfo__edit-button {
+.user-info__edit-button {
   margin-left: 0.5em;
 }
 </style>

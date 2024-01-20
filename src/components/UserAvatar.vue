@@ -1,7 +1,7 @@
 <template>
-  <div class="userinfo__avatar">
-    <div class="userinfo__avatar--circle">
-      <span class="userinfo__avatar-image">
+  <div class="user-info__avatar">
+    <div class="user-info__avatar--circle">
+      <span class="user-info__avatar-image">
         <img
           :src="avatarUrl"
           alt="avatar"
@@ -18,13 +18,13 @@ defineProps<{
 </script>
 
 <style scoped>
-.userinfo__avatar {
+.user-info__avatar {
   flex-shrink: 0;
   margin-right: 12px;
   cursor: pointer;
 }
 
-.userinfo__avatar--circle {
+.user-info__avatar--circle {
   border-radius: 50%;
   position: relative;
   display: inline-flex;
@@ -39,17 +39,17 @@ defineProps<{
   background-color: rgb(201, 205, 212);
 }
 
-.userinfo__avatar--circle {
+.user-info__avatar--circle {
   overflow: hidden;
 }
 
-.userinfo__avatar-image {
+.user-info__avatar-image {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
 
-.userinfo__avatar-image img {
+.user-info__avatar-image img {
   width: 100%;
   height: 100%;
 }
