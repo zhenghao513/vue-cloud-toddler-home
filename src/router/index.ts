@@ -7,16 +7,16 @@ const routes: RouteRecordRaw[] = [
     path: '/login',
     name: 'Login',
     component: () => import('@/views/Login.vue'),
-    beforeEnter: () => {
+    beforeEnter: (_to, _from, next) => {
       const isAuthenticated = document.cookie.replace(
         /(?:(?:^|.*;\s*)isAuthenticated\s*\=\s*([^;]*).*$)|^.*$/,
         '$1',
       )
       if (isAuthenticated) {
-        return { name: 'Home' }
+        next({ name: 'Home' })
       }
 
-      return { name: 'Login' }
+      next()
     },
   },
   {
