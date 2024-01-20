@@ -17,6 +17,7 @@
 .container {
   display: flex;
   height: 100vh;
+  margin-top: 0;
 }
 
 .banner {
