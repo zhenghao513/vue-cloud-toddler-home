@@ -4,6 +4,36 @@ import userRoutes from './routes/user'
 
 const routes: RouteRecordRaw[] = [
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/Login.vue'),
+    beforeEnter: () => {
+      const isAuthenticated = document.cookie.replace(
+        /(?:(?:^|.*;\s*)isAuthenticated\s*\=\s*([^;]*).*$)|^.*$/,
+        '$1',
+      )
+      if (isAuthenticated) {
+        return { name: 'Home' }
+      }
+
+      return { name: 'Login' }
+    },
+  },
+  {
+    path: '/',
+    redirect: () => {
+      const isAuthenticated = document.cookie.replace(
+        /(?:(?:^|.*;\s*)isAuthenticated\s*\=\s*([^;]*).*$)|^.*$/,
+        '$1',
+      )
+      if (isAuthenticated) {
+        return { name: 'Home' }
+      }
+
+      return { name: 'Login' }
+    },
+  },
+  {
     path: '/',
     name: 'Home',
     meta: { title: '首页' },
@@ -32,6 +62,17 @@ const router = createRouter({
 
     return { top: 0 }
   },
+})
+
+router.beforeEach(async (to) => {
+  const isAuthenticated = document.cookie.replace(
+    /(?:(?:^|.*;\s*)isAuthenticated\s*\=\s*([^;]*).*$)|^.*$/,
+    '$1',
+  )
+
+  if (!isAuthenticated && to.name !== 'Login') {
+    return { name: 'Login' }
+  }
 })
 
 export default router

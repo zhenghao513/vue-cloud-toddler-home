@@ -1,5 +1,6 @@
 <template>
   <VanNavBar
+    v-show="visible"
     :title="$route.meta.title"
     :left-arrow="showLeftArrow"
     fixed
@@ -18,6 +19,14 @@ const showLeftArrow = computed(() => {
   if (route.name) {
     return !['Home', 'User'].includes(route.name as string)
   }
+  return false
+})
+
+const visible = computed(() => {
+  if (route.name) {
+    return !['Login'].includes(route.name as string)
+  }
+
   return false
 })
 </script>
