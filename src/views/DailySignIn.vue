@@ -61,6 +61,7 @@
 <script setup lang="ts">
 import useGeolocationService from '@/composables/useGeolocationService'
 import { useSignInStore } from '@/stores/sign-in'
+import launchConfetti from '@/utils/confetti'
 import { showLoadingToast, showSuccessToast } from 'vant'
 import 'vant/es/toast/style'
 
@@ -102,6 +103,7 @@ const handleSignIn = () => {
     forbidClick: true,
     onClose() {
       showSuccessToast('签到成功')
+      launchConfetti()
       setSignInState(true)
     },
   })
