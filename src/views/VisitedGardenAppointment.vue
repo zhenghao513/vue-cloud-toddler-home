@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     backgroundColor="#61CFBE"
     title="预约参观"
   >
@@ -59,7 +59,7 @@
         </VanButton>
       </div>
     </VanForm>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts">

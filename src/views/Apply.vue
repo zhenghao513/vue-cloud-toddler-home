@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     backgroundColor="#E87361"
     title="报名申请"
   >
@@ -18,7 +18,7 @@
       </NavigationButtonBlock>
       <NavigationButtonBlock backgroundColor="#E87361">线上缴费</NavigationButtonBlock>
     </div>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts"></script>

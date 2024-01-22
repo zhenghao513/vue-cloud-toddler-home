@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     backgroundColor="#BDDB69"
     title="问卷调查"
   >
@@ -164,7 +164,7 @@
         </VanButton>
       </div>
     </VanForm>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts">

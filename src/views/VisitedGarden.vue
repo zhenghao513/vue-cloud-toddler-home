@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     title="园所参观"
     backgroundColor="#ED955F"
   >
@@ -23,7 +23,7 @@
         室外环境
       </NavigationButtonBlock>
     </div>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts"></script>

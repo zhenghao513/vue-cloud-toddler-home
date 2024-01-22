@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     backgroundColor="#ED955F"
     title="园所介绍"
   >
@@ -21,7 +21,7 @@
         了解更多
       </NavigationButtonBlock>
     </div>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts">

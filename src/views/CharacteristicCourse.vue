@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     title="特色课程"
     background-color="#F7CE00"
   >
@@ -37,7 +37,7 @@
         </div>
       </template>
     </Grid>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts">

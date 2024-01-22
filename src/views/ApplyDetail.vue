@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     backgroundColor="#E87361"
     :title="title"
   >
@@ -32,7 +32,7 @@
     >
       预约评测
     </NavigationButtonBlock>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts">

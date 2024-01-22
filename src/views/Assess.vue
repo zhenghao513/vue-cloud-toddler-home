@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     backgroundColor="#92C48D"
     title="成长评估"
   >
@@ -9,7 +9,7 @@
       <NavigationButtonBlock>报告示例</NavigationButtonBlock>
       <NavigationButtonBlock>订阅报告</NavigationButtonBlock>
     </div>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts"></script>

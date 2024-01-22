@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     title="建议中心"
     background-color="#F9A01E"
   >
@@ -69,7 +69,7 @@
         </VanButton>
       </div>
     </VanForm>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts">

@@ -1,5 +1,5 @@
 <template>
-  <TitlebarLayout
+  <TitleBarLayout
     backgroundColor="#46B1E3"
     title="联系我们"
   >
@@ -25,7 +25,7 @@
         :value="item.value"
       />
     </VanCellGroup>
-  </TitlebarLayout>
+  </TitleBarLayout>
 </template>
 
 <script setup lang="ts">
