@@ -14,9 +14,9 @@ const routes: RouteRecordRaw[] = [
       )
       if (isAuthenticated) {
         next({ name: 'Home' })
+      } else {
+        next()
       }
-
-      next()
     },
   },
   {
