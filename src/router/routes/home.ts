@@ -14,10 +14,10 @@ const homeRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/SuggestionCenter.vue'),
   },
   {
-    path: '/characteristic-course',
-    name: 'CharacteristicCourse',
+    path: '/course',
+    name: 'Course',
     meta: { title: '特色课程' },
-    component: () => import('@/views/CharacteristicCourse.vue'),
+    component: () => import('@/views/Course.vue'),
   },
   {
     path: '/recipe',

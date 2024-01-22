@@ -61,7 +61,7 @@ const gridItems: GridItemProps[] = [
     replace: false,
     text: '特色课程',
     icon: 'icon-a-027_youxi-25',
-    to: { name: 'CharacteristicCourse' },
+    to: { name: 'Course' },
   },
   {
     dot: false,
