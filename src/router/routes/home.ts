@@ -2,10 +2,10 @@ import { RouteRecordRaw } from 'vue-router'
 
 const homeRoutes: RouteRecordRaw[] = [
   {
-    path: '/daily-sign-in',
-    name: 'DailySignIn',
+    path: '/clock-in',
+    name: 'ClockIn',
     meta: { title: '每日签到' },
-    component: () => import('@/views/DailySignIn.vue'),
+    component: () => import('@/views/ClockIn.vue'),
   },
   {
     path: '/suggestion-center',

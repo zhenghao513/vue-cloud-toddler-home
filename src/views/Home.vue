@@ -75,7 +75,7 @@ const gridItems: GridItemProps[] = [
     replace: false,
     text: '每日签到',
     icon: 'icon-a-027_rili',
-    to: { name: 'DailySignIn' },
+    to: { name: 'ClockIn' },
   },
 ]
 </script>
