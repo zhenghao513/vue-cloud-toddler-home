@@ -4,19 +4,19 @@
     title="报名申请"
   >
     <div style="margin-top: 1.5em">
-      <AppButton
+      <NavigationButtonBlock
         backgroundColor="#E87361"
         @click="$router.push({ name: 'ApplyBegin' })"
       >
         新幼儿报名
-      </AppButton>
-      <AppButton
+      </NavigationButtonBlock>
+      <NavigationButtonBlock
         backgroundColor="#E87361"
         @click="$router.push({ name: 'ApplyOrigin' })"
       >
         原幼儿报名
-      </AppButton>
-      <AppButton backgroundColor="#E87361">线上缴费</AppButton>
+      </NavigationButtonBlock>
+      <NavigationButtonBlock backgroundColor="#E87361">线上缴费</NavigationButtonBlock>
     </div>
   </TitlebarLayout>
 </template>

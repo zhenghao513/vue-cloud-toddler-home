@@ -13,25 +13,25 @@
 
     <h2 class="block__title">幼儿作息时间</h2>
 
-    <AppButton
+    <NavigationButtonBlock
       backgroundColor="#E87361"
       @click="$router.push({ name: 'ApplySurvey' })"
     >
       问卷调查
-    </AppButton>
-    <AppButton
+    </NavigationButtonBlock>
+    <NavigationButtonBlock
       v-if="$route.name === 'ApplyBegin'"
       backgroundColor="#E87361"
       @click="$router.push({ name: 'CharacteristicCourse' })"
     >
       预约体验课
-    </AppButton>
-    <AppButton
+    </NavigationButtonBlock>
+    <NavigationButtonBlock
       backgroundColor="#E87361"
       @click="$router.push({ name: 'Assess' })"
     >
       预约评测
-    </AppButton>
+    </NavigationButtonBlock>
   </TitlebarLayout>
 </template>
 

@@ -9,7 +9,7 @@
       </VanNoticeBar>
     </div>
 
-    <AppMapContainer :center="[lng, lat]" />
+    <AmapContainer :center="[lng, lat]" />
 
     <div class="button">
       <VanButton

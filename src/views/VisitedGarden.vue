@@ -4,24 +4,24 @@
     backgroundColor="#ED955F"
   >
     <div style="margin-top: 1.5em">
-      <AppButton
+      <NavigationButtonBlock
         backgroundColor="#ED955F"
         @click="$router.push({ name: 'Introduce' })"
       >
         园所介绍
-      </AppButton>
-      <AppButton
+      </NavigationButtonBlock>
+      <NavigationButtonBlock
         backgroundColor="#ED955F"
         @click="$router.push({ name: 'EnvironmentIndoor' })"
       >
         室内环境
-      </AppButton>
-      <AppButton
+      </NavigationButtonBlock>
+      <NavigationButtonBlock
         backgroundColor="#ED955F"
         @click="$router.push({ name: 'EnvironmentOutdoor' })"
       >
         室外环境
-      </AppButton>
+      </NavigationButtonBlock>
     </div>
   </TitlebarLayout>
 </template>

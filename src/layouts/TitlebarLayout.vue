@@ -1,6 +1,6 @@
 <template>
   <PageLayout>
-    <AppTitlebar v-bind="$attrs" />
+    <AppTitleBar v-bind="$attrs" />
     <div class="slot-container">
       <slot></slot>
     </div>

@@ -2,7 +2,7 @@
   <PageLayout>
     <div class="container">
       <VanUploader :after-read="afterRead">
-        <UserAvatar :avatar-url="newAvatar ?? avatar" />
+        <AppAvatar :avatar-url="newAvatar ?? avatar" />
       </VanUploader>
 
       <div style="width: 100%">

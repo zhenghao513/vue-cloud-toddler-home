@@ -1,7 +1,7 @@
 <template>
   <PageLayout>
     <div class="container">
-      <UserInfo />
+      <UserProfile />
     </div>
   </PageLayout>
 </template>

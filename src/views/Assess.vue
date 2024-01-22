@@ -6,8 +6,8 @@
     <h2 class="block__title"></h2>
 
     <div class="button-group__bottom">
-      <AppButton>报告示例</AppButton>
-      <AppButton>订阅报告</AppButton>
+      <NavigationButtonBlock>报告示例</NavigationButtonBlock>
+      <NavigationButtonBlock>订阅报告</NavigationButtonBlock>
     </div>
   </TitlebarLayout>
 </template>

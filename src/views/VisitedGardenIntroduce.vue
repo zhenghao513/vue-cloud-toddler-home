@@ -14,12 +14,12 @@
     </span>
 
     <div class="button-group__bottom">
-      <AppButton @click="$router.push({ name: 'VisitedGardenAppointment' })">
+      <NavigationButtonBlock @click="$router.push({ name: 'VisitedGardenAppointment' })">
         预约参观
-      </AppButton>
-      <AppButton @click="$router.push({ name: 'Contact' })">
+      </NavigationButtonBlock>
+      <NavigationButtonBlock @click="$router.push({ name: 'Contact' })">
         了解更多
-      </AppButton>
+      </NavigationButtonBlock>
     </div>
   </TitlebarLayout>
 </template>

@@ -1,11 +1,11 @@
 <template>
   <PageLayout>
-    <AppNoticebar
+    <AppNoticeBar
       left-icon="volume-o"
       :text="data?.message"
     />
     <AppSearch />
-    <AppGrid :grid-list="gridItems" />
+    <NavigationGrid :grid-list="gridItems" />
   </PageLayout>
 </template>
 

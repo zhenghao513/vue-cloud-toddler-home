@@ -1,5 +1,5 @@
 <template>
-  <TheNavbar />
+  <TheNavBar />
   <VanBackTop bottom="20vh" />
   <RouterView v-slot="{ Component }">
     <Transition
@@ -9,7 +9,7 @@
       <component :is="Component" />
     </Transition>
   </RouterView>
-  <TheTabbar />
+  <TheTabBar />
 </template>
 
 <script setup lang="ts"></script>

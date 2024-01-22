@@ -1,6 +1,6 @@
 <template>
   <div class="user-info">
-    <UserAvatar :avatar-url="avatar" />
+    <AppAvatar :avatar-url="avatar" />
 
     <div class="user-info__inner">
       <div class="user-info__nickname">
@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <UserData />
+  <UserProfileDataPanel />
 </template>
 
 <script setup lang="ts">
