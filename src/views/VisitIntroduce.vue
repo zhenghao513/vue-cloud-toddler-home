@@ -14,7 +14,9 @@
     </span>
 
     <div class="button-group__bottom">
-      <NavigationButtonBlock @click="$router.push({ name: 'VisitedGardenAppointment' })">
+      <NavigationButtonBlock
+        @click="$router.push({ name: 'VisitAppointment' })"
+      >
         预约参观
       </NavigationButtonBlock>
       <NavigationButtonBlock @click="$router.push({ name: 'Contact' })">

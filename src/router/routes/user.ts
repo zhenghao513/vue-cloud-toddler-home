@@ -8,10 +8,10 @@ const userRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/Contact.vue'),
   },
   {
-    path: '/visited-garden-appointment',
-    name: 'VisitedGardenAppointment',
+    path: '/visit-appointment',
+    name: 'VisitAppointment',
     meta: { title: '预约参观' },
-    component: () => import('@/views/VisitedGardenAppointment.vue'),
+    component: () => import('@/views/VisitAppointment.vue'),
   },
   {
     path: '/user-profile-edit',

@@ -1,16 +1,18 @@
 <template>
   <TitleBarLayout
     backgroundColor="#ED955F"
-    title="室外环境"
+    title="室内环境"
   >
-    <h2 class="block__title">整体概览</h2>
+    <h2 class="block__title">教育环境</h2>
     <van-empty />
 
-    <h2 class="block__title">大型玩具</h2>
+    <h2 class="block__title">保育环境</h2>
     <van-empty />
 
     <div class="button-group__bottom">
-      <NavigationButtonBlock @click="$router.push({ name: 'VisitedGardenAppointment' })">
+      <NavigationButtonBlock
+        @click="$router.push({ name: 'VisitAppointment' })"
+      >
         预约参观
       </NavigationButtonBlock>
       <NavigationButtonBlock @click="$router.push({ name: 'Contact' })">

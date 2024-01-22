@@ -54,7 +54,7 @@ const gridItems: GridItemProps[] = [
     replace: false,
     text: '园所参观',
     icon: 'icon-a-027_ditu',
-    to: { name: 'VisitedGarden' },
+    to: { name: 'Visit' },
   },
   {
     dot: false,

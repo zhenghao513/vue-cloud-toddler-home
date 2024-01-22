@@ -6,19 +6,19 @@
     <div style="margin-top: 1.5em">
       <NavigationButtonBlock
         backgroundColor="#ED955F"
-        @click="$router.push({ name: 'Introduce' })"
+        @click="$router.push({ name: 'VisitIntroduce' })"
       >
         园所介绍
       </NavigationButtonBlock>
       <NavigationButtonBlock
         backgroundColor="#ED955F"
-        @click="$router.push({ name: 'EnvironmentIndoor' })"
+        @click="$router.push({ name: 'VisitEnvironmentIndoor' })"
       >
         室内环境
       </NavigationButtonBlock>
       <NavigationButtonBlock
         backgroundColor="#ED955F"
-        @click="$router.push({ name: 'EnvironmentOutdoor' })"
+        @click="$router.push({ name: 'VisitEnvironmentOutdoor' })"
       >
         室外环境
       </NavigationButtonBlock>
