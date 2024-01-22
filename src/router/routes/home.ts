@@ -8,10 +8,10 @@ const homeRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/ClockIn.vue'),
   },
   {
-    path: '/suggestion-center',
-    name: 'SuggestionCenter',
+    path: '/suggestion',
+    name: 'Suggestion',
     meta: { title: '建议中心' },
-    component: () => import('@/views/SuggestionCenter.vue'),
+    component: () => import('@/views/Suggestion.vue'),
   },
   {
     path: '/course',

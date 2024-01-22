@@ -68,7 +68,7 @@ const gridItems: GridItemProps[] = [
     replace: false,
     text: '建议中心',
     icon: 'icon-a-027_xinfeng',
-    to: { name: 'SuggestionCenter' },
+    to: { name: 'Suggestion' },
   },
   {
     dot: false,
