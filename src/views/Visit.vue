@@ -12,13 +12,13 @@
       </NavigationButtonBlock>
       <NavigationButtonBlock
         backgroundColor="#ED955F"
-        @click="$router.push({ name: 'VisitEnvironmentIndoor' })"
+        @click="$router.push({ name: 'VisitIndoor' })"
       >
         室内环境
       </NavigationButtonBlock>
       <NavigationButtonBlock
         backgroundColor="#ED955F"
-        @click="$router.push({ name: 'VisitEnvironmentOutdoor' })"
+        @click="$router.push({ name: 'VisitOutdoor' })"
       >
         室外环境
       </NavigationButtonBlock>

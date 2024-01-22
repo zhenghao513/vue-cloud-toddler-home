@@ -45,13 +45,13 @@ const homeRoutes: RouteRecordRaw[] = [
   },
   {
     path: '/visit-indoor',
-    name: 'VisitEnvironmentIndoor',
+    name: 'VisitIndoor',
     meta: { title: '室内环境' },
     component: () => import('@/views/VisitEnvironmentIndoor.vue'),
   },
   {
     path: '/visit-outdoor',
-    name: 'VisitEnvironmentOutdoor',
+    name: 'VisitOutdoor',
     meta: { title: '室外环境' },
     component: () => import('@/views/VisitEnvironmentOutdoor.vue'),
   },
