@@ -15,7 +15,7 @@
 
     <NavigationButtonBlock
       backgroundColor="#E87361"
-      @click="$router.push({ name: 'ApplySurvey' })"
+      @click="$router.push({ name: 'ApplyDetailSurvey' })"
     >
       问卷调查
     </NavigationButtonBlock>

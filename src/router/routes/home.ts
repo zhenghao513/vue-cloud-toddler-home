@@ -74,10 +74,10 @@ const homeRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/ApplyDetail.vue'),
   },
   {
-    path: '/apply-survey',
-    name: 'ApplySurvey',
+    path: '/apply-detail-survey',
+    name: 'ApplyDetailSurvey',
     meta: { title: '问卷调查' },
-    component: () => import('@/views/ApplySurvey.vue'),
+    component: () => import('@/views/ApplyDetailSurvey.vue'),
   },
   {
     path: '/assess',
