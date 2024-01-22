@@ -10,7 +10,7 @@
         <VanButton
           type="primary"
           size="small"
-          @click="$router.push({ name: 'UserinfoEdit' })"
+          @click="$router.push({ name: 'UserProfileEdit' })"
         >
           编辑资料
         </VanButton>

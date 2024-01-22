@@ -14,10 +14,10 @@ const userRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/VisitedGardenAppointment.vue'),
   },
   {
-    path: '/userinfo-edit',
-    name: 'UserinfoEdit',
+    path: '/user-profile-edit',
+    name: 'UserProfileEdit',
     meta: { title: '编辑资料' },
-    component: () => import('@/views/UserinfoEdit.vue'),
+    component: () => import('@/views/UserProfileEdit.vue'),
   },
 ]
 
