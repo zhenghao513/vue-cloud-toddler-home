@@ -5,7 +5,7 @@ const userRoutes: RouteRecordRaw[] = [
     path: '/contact',
     name: 'Contact',
     meta: { title: '联系我们' },
-    component: () => import('@/views/ContactUs.vue'),
+    component: () => import('@/views/Contact.vue'),
   },
   {
     path: '/visited-garden-appointment',
