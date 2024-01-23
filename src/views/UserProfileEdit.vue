@@ -30,12 +30,15 @@
         </VanCellGroup>
       </div>
 
-      <VanButton
-        type="success"
-        @click="handleSaveChange"
-      >
-        保存更改
-      </VanButton>
+      <div style="width: 100%; padding: 0 16px">
+        <VanButton
+          block
+          type="success"
+          @click="handleSaveChange"
+        >
+          保存更改
+        </VanButton>
+      </div>
     </div>
   </PageLayout>
 </template>
