@@ -1,6 +1,6 @@
 <template>
   <div class="user-info">
-    <AppAvatar :avatar-url="avatar" />
+    <AvatarCircle :avatar-url="avatar" />
 
     <div class="user-info__inner">
       <div class="user-info__nickname">
