@@ -9,7 +9,7 @@
         <VanCellGroup inset>
           <VanCell
             title="ID"
-            :value="id"
+            :value="userId"
           />
 
           <VanCell
@@ -44,11 +44,7 @@
 import type { FieldInstance, UploaderFileListItem } from 'vant'
 import { useUserInfoStore } from '@/stores/user-info.ts'
 
-const { avatarUrl, nickName } = storeToRefs(useUserInfoStore())
-
-const id = computed(() => {
-  return Math.floor(Math.random() * (999999 - 100000)) + 100000
-})
+const { avatarUrl, nickName, userId } = storeToRefs(useUserInfoStore())
 
 const isEditUsername = ref(false)
 

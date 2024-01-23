@@ -68,6 +68,7 @@
 <script setup lang="ts">
 import { UserOutlined, LockOutlined } from '@ant-design/icons-vue'
 import { useStorage } from '@vueuse/core'
+import { useUserInfoStore } from '@/stores/user-info.ts'
 
 const loginConfig = useStorage('login-config', {
   remember: true,
@@ -95,6 +96,7 @@ watch(
 )
 
 const router = useRouter()
+const { setUserId } = useUserInfoStore()
 const onFinish = (values: any) => {
   const { remember } = loginConfig.value
   const { username, password } = values
@@ -103,6 +105,7 @@ const onFinish = (values: any) => {
   loginConfig.value.password = remember ? password : ''
 
   document.cookie = 'isAuthenticated=true'
+  setUserId(String(Math.floor(Math.random() * (999999 - 100000)) + 100000))
 
   router.push({ name: 'Home' })
 }
