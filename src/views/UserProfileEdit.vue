@@ -2,7 +2,7 @@
   <PageLayout>
     <div class="container">
       <VanUploader :after-read="afterRead">
-        <AvatarCircle :avatar-url="newAvatar ?? avatarUrl" />
+        <AvatarCircle :avatar-url="newAvatarUrl ?? avatarUrl" />
       </VanUploader>
 
       <div style="width: 100%">
@@ -13,26 +13,26 @@
           />
 
           <VanCell
-            v-if="!isEditUsername"
+            v-if="!isEditNickName"
             title="用户名"
-            :value="newUsername"
-            @click="isEditUsername = !isEditUsername"
+            :value="newNickName"
+            @click="isEditNickName = !isEditNickName"
           />
           <VanField
             v-else
             ref="fieldRef"
-            v-model="newUsername"
+            v-model="newNickName"
             label="用户名"
             placeholder="请输入用户名"
             input-align="right"
-            @blur="isEditUsername = !isEditUsername"
+            @blur="isEditNickName = !isEditNickName"
           />
         </VanCellGroup>
       </div>
 
       <VanButton
         type="success"
-        @click="handleSave"
+        @click="handleSaveChange"
       >
         保存更改
       </VanButton>
@@ -46,7 +46,7 @@ import { useUserInfoStore } from '@/stores/user-info.ts'
 
 const { avatarUrl, nickName, userId } = storeToRefs(useUserInfoStore())
 
-const isEditUsername = ref(false)
+const isEditNickName = ref(false)
 
 const fieldRef = ref<FieldInstance | null>(null)
 watch(fieldRef, () => {
@@ -55,19 +55,19 @@ watch(fieldRef, () => {
   }
 })
 
-const newAvatar = ref()
-const newUsername = ref(nickName.value)
+const newAvatarUrl = ref()
+const newNickName = ref(nickName.value)
 
 const afterRead = (file: UploaderFileListItem | UploaderFileListItem[]) => {
-  newAvatar.value = (file as UploaderFileListItem).objectUrl
+  newAvatarUrl.value = (file as UploaderFileListItem).objectUrl
 }
 
-const handleSave = () => {
-  if (newAvatar.value) {
-    avatarUrl.value = newAvatar.value
+const handleSaveChange = () => {
+  if (newAvatarUrl.value) {
+    avatarUrl.value = newAvatarUrl.value
   }
 
-  nickName.value = newUsername.value
+  nickName.value = newNickName.value
 }
 </script>
 
