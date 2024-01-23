@@ -2,7 +2,7 @@
   <PageLayout>
     <div class="container">
       <VanUploader :after-read="afterRead">
-        <AvatarCircle :avatar-url="newAvatar ?? avatar" />
+        <AvatarCircle :avatar-url="newAvatar ?? avatarUrl" />
       </VanUploader>
 
       <div style="width: 100%">
@@ -42,9 +42,9 @@
 
 <script setup lang="ts">
 import type { FieldInstance, UploaderFileListItem } from 'vant'
-import { useUserinfoStore } from '@/stores/userinfo'
+import { useUserInfoStore } from '@/stores/user-info.ts'
 
-const { avatar, username } = storeToRefs(useUserinfoStore())
+const { avatarUrl, nickName } = storeToRefs(useUserInfoStore())
 
 const id = computed(() => {
   return Math.floor(Math.random() * (999999 - 100000)) + 100000
@@ -60,7 +60,7 @@ watch(fieldRef, () => {
 })
 
 const newAvatar = ref()
-const newUsername = ref(username.value)
+const newUsername = ref(nickName.value)
 
 const afterRead = (file: UploaderFileListItem | UploaderFileListItem[]) => {
   newAvatar.value = (file as UploaderFileListItem).objectUrl
@@ -68,10 +68,10 @@ const afterRead = (file: UploaderFileListItem | UploaderFileListItem[]) => {
 
 const handleSave = () => {
   if (newAvatar.value) {
-    avatar.value = newAvatar.value
+    avatarUrl.value = newAvatar.value
   }
 
-  username.value = newUsername.value
+  nickName.value = newUsername.value
 }
 </script>
 

@@ -1,17 +1,22 @@
-export const useUserinfoStore = defineStore('userinfo', () => {
-  const DEFAULT_AVATAR_URL =
+export const useUserInfoStore = defineStore('user-info', () => {
+  const BASE_AVATAR_URL =
     'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp'
 
-  const avatar = ref(DEFAULT_AVATAR_URL)
-  const username = ref('Administrator')
+  const avatarUrl = ref(BASE_AVATAR_URL)
+  const nickName = ref('admin')
 
-  const setAvatar = (url: string) => {
-    avatar.value = url
+  const setAvatarUrl = (url: string) => {
+    avatarUrl.value = url
   }
 
-  const setUsername = (value: string) => {
-    username.value = value
+  const setNickName = (value: string) => {
+    nickName.value = value
   }
 
-  return { avatar, username, setAvatar, setUsername }
+  return {
+    avatarUrl,
+    nickName,
+    setAvatarUrl,
+    setNickName,
+  }
 })

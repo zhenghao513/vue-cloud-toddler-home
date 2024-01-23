@@ -1,10 +1,10 @@
 <template>
   <div class="user-info">
-    <AvatarCircle :avatar-url="avatar" />
+    <AvatarCircle :avatar-url="avatarUrl" />
 
     <div class="user-info__inner">
-      <div class="user-info__nickname">
-        <span>{{ username }}</span>
+      <div class="user-info__nick-name">
+        <span>{{ nickName }}</span>
       </div>
       <div class="user-info__edit-button">
         <VanButton
@@ -22,9 +22,9 @@
 </template>
 
 <script setup lang="ts">
-import { useUserinfoStore } from '@/stores/userinfo'
+import { useUserInfoStore } from '@/stores/user-info.ts'
 
-const { avatar, username } = storeToRefs(useUserinfoStore())
+const { avatarUrl, nickName } = storeToRefs(useUserInfoStore())
 </script>
 
 <style scoped>
@@ -46,7 +46,7 @@ const { avatar, username } = storeToRefs(useUserinfoStore())
   display: flex;
 }
 
-.user-info__nickname {
+.user-info__nick-name {
   margin-right: 8px;
   color: rgb(78, 89, 105);
   font-size: 30px;
