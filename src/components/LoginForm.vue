@@ -68,6 +68,7 @@
 <script setup lang="ts">
 import { UserOutlined, LockOutlined } from '@ant-design/icons-vue'
 import { useStorage } from '@vueuse/core'
+import { v4 as uuidv4 } from 'uuid'
 import { useUserInfoStore } from '@/stores/user-info.ts'
 
 const loginConfig = useStorage('login-config', {
@@ -104,8 +105,10 @@ const onFinish = (values: any) => {
   loginConfig.value.username = remember ? username : ''
   loginConfig.value.password = remember ? password : ''
 
+  const uuid = uuidv4()
   document.cookie = 'isAuthenticated=true'
-  setUserId(String(Math.floor(Math.random() * (999999 - 100000)) + 100000))
+  setUserId(uuid)
+  document.cookie = `userId=${uuid}`
 
   router.push({ name: 'Home' })
 }
