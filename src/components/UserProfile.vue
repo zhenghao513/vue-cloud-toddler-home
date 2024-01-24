@@ -44,6 +44,7 @@ const { avatarUrl, nickName } = storeToRefs(useUserInfoStore())
 .user-info__inner {
   flex: 1;
   display: flex;
+  flex-direction: column;
 }
 
 .user-info__nick-name {
@@ -54,6 +55,6 @@ const { avatarUrl, nickName } = storeToRefs(useUserInfoStore())
 }
 
 .user-info__edit-button {
-  margin-left: 0.5em;
+  margin-top: 0.5em;
 }
 </style>
