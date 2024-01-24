@@ -20,7 +20,7 @@
           />
           <VanField
             v-else
-            ref="fieldRef"
+            ref="nickNameFieldRef"
             v-model="newNickName"
             label="用户名"
             placeholder="请输入用户名"
@@ -46,17 +46,12 @@
 <script setup lang="ts">
 import type { FieldInstance, UploaderFileListItem } from 'vant'
 import { useUserInfoStore } from '@/stores/user-info.ts'
+import { useFieldEdit } from '@/composables/useFieldEdit'
 
 const { avatarUrl, nickName, userId } = storeToRefs(useUserInfoStore())
 
-const isEditNickName = ref(false)
-
-const fieldRef = ref<FieldInstance | null>(null)
-watch(fieldRef, () => {
-  if (fieldRef.value !== null) {
-    fieldRef.value?.focus()
-  }
-})
+const nickNameFieldRef = ref<FieldInstance | null>(null)
+const { isEdit: isEditNickName } = useFieldEdit(nickNameFieldRef)
 
 const newAvatarUrl = ref()
 const newNickName = ref(nickName.value)
