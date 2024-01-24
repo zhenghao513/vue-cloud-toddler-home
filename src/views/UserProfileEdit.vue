@@ -8,13 +8,13 @@
       <div style="width: 100%">
         <VanCellGroup inset>
           <VanCell
-            title="ID"
-            :value="userId"
+            title="云幼家号"
+            :value="userIdFormat"
           />
 
           <VanCell
             v-if="!isEditNickName"
-            title="用户名"
+            title="昵称"
             :value="newNickName"
             @click="isEditNickName = !isEditNickName"
           />
@@ -22,8 +22,8 @@
             v-else
             ref="nickNameFieldRef"
             v-model="newNickName"
-            label="用户名"
-            placeholder="请输入用户名"
+            label="昵称"
+            placeholder="请输入昵称"
             input-align="right"
             @blur="isEditNickName = !isEditNickName"
           />
@@ -49,6 +49,9 @@ import { useUserInfoStore } from '@/stores/user-info.ts'
 import { useFieldEdit } from '@/composables/useFieldEdit'
 
 const { avatarUrl, nickName, userId } = storeToRefs(useUserInfoStore())
+const userIdFormat = computed(() => {
+  return userId.value.split('-')[0]
+})
 
 const nickNameFieldRef = ref<FieldInstance | null>(null)
 const { isEdit: isEditNickName } = useFieldEdit(nickNameFieldRef)
