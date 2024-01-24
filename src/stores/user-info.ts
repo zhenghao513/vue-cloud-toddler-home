@@ -9,6 +9,7 @@ export const useUserInfoStore = defineStore('user-info', () => {
   const userId = ref(BASE_USER_ID)
   const avatarUrl = ref(BASE_AVATAR_URL)
   const nickName = ref('admin')
+  const age = ref(3)
 
   const setUserId = (id: string) => {
     userId.value = id
@@ -22,12 +23,18 @@ export const useUserInfoStore = defineStore('user-info', () => {
     nickName.value = value
   }
 
+  const setAge = (value: number) => {
+    age.value = value
+  }
+
   return {
     avatarUrl,
     nickName,
     userId,
+    age,
     setUserId,
     setAvatarUrl,
     setNickName,
+    setAge,
   }
 })

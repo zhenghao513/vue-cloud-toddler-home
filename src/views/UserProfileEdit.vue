@@ -27,6 +27,31 @@
             input-align="right"
             @blur="isEditNickName = !isEditNickName"
           />
+
+          <VanCell
+            v-if="!isEditAge"
+            title="年龄"
+            :value="newAge"
+            @click="isEditAge = !isEditAge"
+          />
+          <VanField
+            v-else
+            v-model="newAge"
+            readonly
+            input-align="right"
+            label="年龄"
+            @click="isEditAge = true"
+          />
+          <VanPopup
+            v-model:show="isEditAge"
+            position="bottom"
+          >
+            <VanPicker
+              :columns="columns"
+              @confirm="onConfirm"
+              @cancel="isEditAge = false"
+            />
+          </VanPopup>
         </VanCellGroup>
       </div>
 
@@ -44,21 +69,41 @@
 </template>
 
 <script setup lang="ts">
-import type { FieldInstance, UploaderFileListItem } from 'vant'
+import type {
+  FieldInstance,
+  UploaderFileListItem,
+  PickerColumn,
+  PickerConfirmEventParams,
+} from 'vant'
 import { useUserInfoStore } from '@/stores/user-info.ts'
 import { useFieldEdit } from '@/composables/useFieldEdit'
 
-const { avatarUrl, nickName, userId } = storeToRefs(useUserInfoStore())
+const { avatarUrl, nickName, userId, age } = storeToRefs(useUserInfoStore())
 const userIdFormat = computed(() => {
   return userId.value.split('-')[0]
 })
 
+// 更改昵称
 const nickNameFieldRef = ref<FieldInstance | null>(null)
 const { isEdit: isEditNickName } = useFieldEdit(nickNameFieldRef)
+
+// 更改年龄
+const { isEdit: isEditAge } = useFieldEdit()
+const newAge = ref(age.value)
+const columns: PickerColumn = [
+  { text: 3, value: 3 },
+  { text: 4, value: 4 },
+  { text: 5, value: 5 },
+]
+const onConfirm = ({ selectedOptions }: PickerConfirmEventParams) => {
+  newAge.value = selectedOptions[0]?.text as number
+  isEditAge.value = false
+}
 
 const newAvatarUrl = ref()
 const newNickName = ref(nickName.value)
 
+// 更改头像
 const afterRead = (file: UploaderFileListItem | UploaderFileListItem[]) => {
   newAvatarUrl.value = (file as UploaderFileListItem).objectUrl
 }
@@ -69,6 +114,7 @@ const handleSaveChange = () => {
   }
 
   nickName.value = newNickName.value
+  age.value = Number(newAge.value)
 }
 </script>
 
