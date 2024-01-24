@@ -2,6 +2,7 @@
   <PageLayout>
     <div class="container">
       <UserProfile />
+      <UserNavigationCell />
     </div>
   </PageLayout>
 </template>
