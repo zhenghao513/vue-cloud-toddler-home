@@ -19,6 +19,12 @@ const userRoutes: RouteRecordRaw[] = [
     meta: { title: '编辑资料' },
     component: () => import('@/views/UserProfileEdit.vue'),
   },
+  {
+    path: '/user-setting',
+    name: 'UserSetting',
+    meta: { title: '设置' },
+    component: () => import('@/views/UserSetting.vue'),
+  },
 ]
 
 export default userRoutes

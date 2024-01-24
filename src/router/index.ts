@@ -12,7 +12,7 @@ const routes: RouteRecordRaw[] = [
         /(?:(?:^|.*;\s*)isAuthenticated\s*\=\s*([^;]*).*$)|^.*$/,
         '$1',
       )
-      if (isAuthenticated) {
+      if (isAuthenticated === 'true') {
         next({ name: 'Home' })
       } else {
         next()
@@ -26,7 +26,7 @@ const routes: RouteRecordRaw[] = [
         /(?:(?:^|.*;\s*)isAuthenticated\s*\=\s*([^;]*).*$)|^.*$/,
         '$1',
       )
-      if (isAuthenticated) {
+      if (isAuthenticated === 'true') {
         return { name: 'Home' }
       }
 
@@ -70,7 +70,7 @@ router.beforeEach(async (to) => {
     '$1',
   )
 
-  if (!isAuthenticated && to.name !== 'Login') {
+  if (isAuthenticated === 'false' && to.name !== 'Login') {
     return { name: 'Login' }
   }
 })

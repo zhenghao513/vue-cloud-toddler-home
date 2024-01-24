@@ -11,6 +11,12 @@
       is-link
       :to="{ name: 'Contact' }"
     />
+
+    <VanCell
+      title="设置"
+      is-link
+      :to="{ name: 'UserSetting' }"
+    />
   </VanCellGroup>
 </template>
 
