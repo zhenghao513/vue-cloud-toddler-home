@@ -3,7 +3,7 @@
     <VanGridItem
       v-for="item in props.gridList"
       :key="item.text"
-      :text="item.text"
+      :text="$t(item.text as string)"
       :to="item.to"
     >
       <template #icon>
