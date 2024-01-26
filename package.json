@@ -19,6 +19,7 @@
     "uuid": "^9.0.1",
     "vant": "^4.8.0",
     "vue": "^3.3.4",
+    "vue-i18n": "9",
     "vue-router": "4",
     "vue-virtual-scroll-grid": "^1.11.0"
   },
