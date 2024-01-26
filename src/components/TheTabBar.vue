@@ -12,7 +12,7 @@
         :icon="item.icon"
         :to="item.to"
       >
-        {{ item.text }}
+        {{ $t(item.text as string) }}
       </van-tabbar-item>
     </van-tabbar>
   </transition>
@@ -30,7 +30,7 @@ const tabbarItems: TabbarItem[] = [
   {
     dot: false,
     replace: false,
-    text: '首页',
+    text: 'tabbar.home',
     name: 'Home',
     icon: 'home-o',
     to: { name: 'Home' },
@@ -38,7 +38,7 @@ const tabbarItems: TabbarItem[] = [
   {
     dot: false,
     replace: false,
-    text: '我',
+    text: 'tabbar.user',
     name: 'User',
     icon: 'user-o',
     to: { name: 'User' },

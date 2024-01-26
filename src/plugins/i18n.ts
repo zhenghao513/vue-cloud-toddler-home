@@ -12,6 +12,10 @@ const messages = {
       suggestion: 'Suggestion',
       clockIn: 'Clock In',
     },
+    tabbar: {
+      home: 'Home',
+      user: 'User',
+    },
   },
   zh: {
     home: {
@@ -23,6 +27,10 @@ const messages = {
       course: '特色课程',
       suggestion: '建议中心',
       clockIn: '每日签到',
+    },
+    tabbar: {
+      home: '首页',
+      user: '我',
     },
   },
 }
