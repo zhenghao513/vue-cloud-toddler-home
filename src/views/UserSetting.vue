@@ -2,6 +2,11 @@
   <PageLayout>
     <VanCellGroup>
       <VanCell
+        is-link
+        :title="$t('language')"
+        :to="{ name: 'SettingsLanguage' }"
+      />
+      <VanCell
         v-for="n in 5"
         :key="n"
         is-link

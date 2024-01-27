@@ -16,6 +16,7 @@ const messages = {
       home: 'Home',
       user: 'User',
     },
+    language: 'Language',
   },
   zh: {
     home: {
@@ -32,6 +33,7 @@ const messages = {
       home: '首页',
       user: '我',
     },
+    language: '语言',
   },
 }
 

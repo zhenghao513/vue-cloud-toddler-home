@@ -25,6 +25,12 @@ const userRoutes: RouteRecordRaw[] = [
     meta: { title: '设置' },
     component: () => import('@/views/UserSetting.vue'),
   },
+  {
+    path: '/settings-language',
+    name: 'SettingsLanguage',
+    meta: { title: '语言' },
+    component: () => import('@/views/SettingsLanguage.vue'),
+  },
 ]
 
 export default userRoutes
