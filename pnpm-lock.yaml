@@ -82,9 +82,6 @@ devDependencies:
   postcss-pxtorem:
     specifier: ^6.0.0
     version: 6.0.0(postcss@8.4.31)
-  prettier:
-    specifier: 3.0.3
-    version: 3.0.3
   typescript:
     specifier: ^5.0.2
     version: 5.2.2
