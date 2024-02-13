@@ -54,6 +54,10 @@ const { data } = useFetch<ContactInformation>(
   align-items: center;
 }
 
+.feature-wrapper * + * {
+  margin-top: 0;
+}
+
 .circle-shape {
   display: flex;
   justify-content: center;
